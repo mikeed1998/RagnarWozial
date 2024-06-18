@@ -32,137 +32,110 @@
         .header-xs { display: show; }
     }
 
-  
-    .parent {
-    position: relative;
-    color: white;
-}
+    .romboide-cont {
+        position: relative;
+    }
 
-.parent a {
-    display: block;
-    width: 100%;
-    padding: 15px 5px; /* Ajusta según sea necesario */
-    color: white;
-    text-decoration: none;
-    text-align: left;
-    /* border: 1px solid white; */
-}
+    .romboide {
+        position: relative;
+        height: 5rem;
+        transition: transform 0.3s, background-color 0.3s;
+    }
 
-.parent:hover > ul {
-    display: block;
-    position: absolute;
-}
+    .romboide-cont:hover .romboide {
+        transform: skewX(-50deg);
+        background-color: #008AE2;
+    }
 
-.child {
-    display: none;
-    /* margin-right: {}; */
-    width: 260px;
-    border: 0;
-}
+    .texto-menu {
+        font-size: 1rem;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
 
-.child li {
-    background-color: white;
-    /* line-height: 40px; */
-    border-bottom: #b5b5b5 1px solid;
-    border-right: #b5b5b5 1px solid;
-    width: 100%;
-}
+    .lista-uno {
+        margin-left: -50px;
+        width: 300px;
+        display: none;
+    }
 
-.child li a {
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    color: #000000;
-    text-decoration: none;
-}
+    .romboide-servicio:hover .lista-uno {
+        display: block; /* Mostrar al hacer hover */
+    }   
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul ul ul {
-    left: 100%;
-    top: 0;
-}
-
-li:hover {
-    background-color: transparent;
-}
-
-.parent li:hover {
-    background-color: #F0F0F0;
-}
-
-.expand {
-    font-size: 12px;
-    float: right;
-    margin-right: 5px;
-}
-
-
-        
-
+    .categoria-link:hover {
+        color:#008AE2;
+    }
 
 </style>
 
 <header class="header-xl"> 
-    <div class="container-fluid">
-        <div class="row alto-header">
-            <div class="col position-relative">
-                
+    <div class="container-fluid" style="background-color: #100643;">
+        <div class="row">
+            <div class="col">
                 <div class="row">
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
                         <div class="row">
-                            <div class="col-9 mx-auto py-1">
+                            <a href="#/" class="col-9 mx-auto">
                                 <div class="row">
                                     <div class="col">
                                         <img src="{{ asset('img/photos/home/Logo_horizontal.png') }}" alt="logo" class="img-fluid">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-6 mx-auto">
                         <div class="row">
-                            <a href="#/" class="col-md-3 col-12 py-4 texto-header">INICIO</a>
-                                
-                                <ul class="col-md-3 col-12 d-flex align-items-center justify-content-center texto-header servicios-header position-relative multilevel-dropdown-menu">
-                                    <li class="parent">
-                                        <a href="#">SERVICIOS</a>
-                                        <ul class="child">
-                                            <li class="parent"><a href="#">Seguridad privada </a>
-                                                <ul class="child">
-                                                    <li class="border-start"><a href="#">Servicio 05</a></li>
-                                                    <li class="border-start"><a href="#">Servicio 06</a></li>
-                                                    <li class="border-start"><a href="#">Servicio 07</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Monitoreo de alarmas</a></li>
-                                            <li><a href="#">Protección personal</a></li>
-                                            <li class="parent"><a href="#">Servicio 04</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            
-                            {{-- </a> --}}
-                            <a href="#/" class="col-md-3 col-12 py-4 texto-header">NOSOTROS</a>
-                            <a href="#/" class="col-md-3 col-12 py-4 texto-header">CONTACTO</a>
+                            <a href="#/" class="col-3 romboide-cont">
+                                <div class="romboide"></div>
+                                <div class="texto-menu">INICIO</div>
+                            </a>
+                            <div class="col-3 romboide-cont romboide-servicio position-relative">
+                                <div class="romboide"></div>
+                                <div class="texto-menu">SERVICIOS</div>
+                                <div class="bg-white position-absolute border lista-uno z-3" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
+                                    <ul class="py-2" style="list-style: none;">
+                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SEGURIDAD PRIVADA</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> MONITOREO DE ALARMAS</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> PROTECCIÓN PERSONAL</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 04</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#/" class="col-3 romboide-cont">
+                                <div class="romboide"></div>
+                                <div class="texto-menu">NOSOTROS</div>
+                            </a>
+                            <a href="#/" class="col-3 romboide-cont">
+                                <div class="romboide"></div>
+                                <div class="texto-menu">CONTACTO</div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 py-3">
+                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
                         <div class="row">
                             <div class="col text-center">
                                 <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-whatsapp text-white fs-5"></i>
+                                    <i class="bi bi-whatsapp text-white fs-5 px-0"></i>
                                 </a>
                                 <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-facebook text-white fs-5"></i>
+                                    <i class="bi bi-facebook text-white fs-5 px-0"></i>
                                 </a>
                                 <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-instagram text-white fs-5"></i>
+                                    <i class="bi bi-instagram text-white fs-5 px-0"></i>
                                 </a>
                             </div>
                         </div>
