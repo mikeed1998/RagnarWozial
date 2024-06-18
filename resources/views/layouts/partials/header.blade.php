@@ -17,6 +17,15 @@
         background-color: #008AE2;   
     }
 
+    .texto-header-servicios {
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     @media(min-width: 992px) {
         .header-xl { display: show; }
         .header-xs { display: none; }
@@ -69,6 +78,10 @@
 
     .categoria-link:hover {
         color:#008AE2;
+    }
+
+    .lista-categoria:hover {
+        background-color: #008AE2;
     }
 
 </style>
@@ -160,8 +173,23 @@
                     <li class="nav-item texto-header">
                         <a class="nav-link text-white" aria-current="page" href="#">INICIO</a>
                     </li>
-                    <li class="nav-item texto-header">
-                        <a class="nav-link text-white" aria-current="page" href="#">SERVICIOS</a>
+                    <li class="nav-item texto-header-servicios">
+                        <a class="nav-link text-white" aria-current="page" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            SERVICIOS <i class="bi bi-plus"></i>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body bg-transparent">
+                                <div class="">
+                                    <a href="#" class="list-group-item lista-categoria">SEGURIDAD PRIVADA</a>
+                                    <a href="#" class="list-group-item lista-categoria">MONITOREO DE ALARMAS</a>
+                                    <a href="#" class="list-group-item lista-categoria">PROTECCIÓN PERSONAL</a>
+                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 04</a>
+                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 05</a>
+                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 06</a>
+                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 07</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item texto-header">
                         <a class="nav-link text-white" aria-current="page" href="#">NOSOTROS</a>
