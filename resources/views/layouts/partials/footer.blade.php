@@ -1,16 +1,16 @@
-<footer style="background-color: #0F0743;">
+<footer>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-7 mx-auto border py-5">
+        <div class="row" style="background-color: #0F0743;">>
+            <div class="col-lg-7 col-md-11 col-12 mx-auto py-5">
                 <div class="row">
-                    <div class="col-4 border">
+                    <div class="col-md-4 col-12">
                         <div class="row">
-                            <div class="col-9 mt-2 mx-auto">
+                            <div class="col-md-9 col-12 mt-2 text-center mx-auto">
                                 <img src="{{ asset('img/photos/home/Logo_normal.png') }}" alt="logo" class="img-fluid">
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 text-white border py-3">
+                    <div class="col-md-4 col-11 text-white mx-auto py-3">
                         <div class="row">
                             <div class="col-12 ">NAVEGACIÓN</div>
                             <div class="col-11 mx-auto">
@@ -24,7 +24,7 @@
                             <div class="col-12" style="font-size: 0.8rem;">Contacto</div>
                         </div>
                     </div>
-                    <div class="col-4 text-white border py-3">
+                    <div class="col-md-4 col-11 text-white mx-auto py-3">
                         <div class="row">
                             <div class="col-12 ">CONTACTO</div>
                             <div class="col-11 mx-auto">
@@ -42,6 +42,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: #028AE8;">
+            <div class="col py-3 text-center" style="color: #0F0743;">
+                RAGNAR todos los derechos reservados, diseñado por WOZIAL
             </div>
         </div>
     </div>

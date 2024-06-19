@@ -57,7 +57,7 @@
     }
 
     .texto-menu {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 500;
         position: absolute;
         top: 50%;
@@ -68,7 +68,7 @@
 
     .lista-uno {
         margin-left: -50px;
-        width: 300px;
+        width: 400px;
         display: none;
     }
 
@@ -113,17 +113,26 @@
                                 <div class="texto-menu">SERVICIOS</div>
                                 <div class="bg-white position-absolute border lista-uno z-3" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
                                     <ul class="py-2" style="list-style: none;">
-                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
                                             <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SEGURIDAD PRIVADA</a>
                                         </li>
-                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
                                             <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> MONITOREO DE ALARMAS</a>
                                         </li>
-                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
                                             <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> PROTECCIÓN PERSONAL</a>
                                         </li>
-                                        <li class="py-2" style="font-size: 1rem; font-weight: 600;">
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
                                             <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 04</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 05</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 06</a>
+                                        </li>
+                                        <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
+                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 07</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -178,7 +187,7 @@
                             SERVICIOS <i class="bi bi-plus"></i>
                         </a>
                         <div class="collapse" id="collapseExample">
-                            <div class="card card-body bg-transparent">
+                            <div class="card card-body bg-transparent border border-white">
                                 <div class="">
                                     <a href="#" class="list-group-item lista-categoria">SEGURIDAD PRIVADA</a>
                                     <a href="#" class="list-group-item lista-categoria">MONITOREO DE ALARMAS</a>

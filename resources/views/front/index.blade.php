@@ -10,10 +10,21 @@
                 height: 51.5rem;
             }
 
+            .img-slider_principal {
+                width: 1800px;
+                height: 47rem;
+            }
+
             .tarjeta-nosotros {
                 z-index: 9999; 
-                height: 25rem; 
+                height: 24rem; 
                 margin-top: 3rem;
+            }
+
+            .texto-nosotros {
+                color:#0F0743; 
+                line-height: 1.2; 
+                text-align: justify;
             }
         } 
 
@@ -22,10 +33,22 @@
                 height: 35rem;
             }
 
+            .img-slider_principal {
+                width: 1800px;
+                height: 28rem;
+            }
+
             .tarjeta-nosotros {
                 z-index: 9999; 
-                height: 25rem; 
-                margin-top: 3rem;
+                height: 18rem; 
+                margin-top: 2rem;
+            }
+
+            .texto-nosotros {
+                font-size: 0.9rem;
+                color:#0F0743; 
+                line-height: 1.1; 
+                text-align: justify;
             }
         }
 
@@ -34,12 +57,26 @@
                 height: 23rem;
             }
 
+            .img-slider_principal {
+                width: 1800px;
+                height: 16rem;
+            }
+
             .tarjeta-nosotros {
                 z-index: 9999; 
-                height: 25rem; 
-                margin-top: 3rem;
+                height: auto; 
+                margin-top: 13rem;
+            }
+
+            .texto-nosotros {
+                font-size: 0.9rem;
+                color:#0F0743; 
+                line-height: 1.1; 
+                text-align: justify;
             }
         }
+
+        
 
     </style>
 @endsection
@@ -50,89 +87,153 @@
         <div class="row">
             <div class="col px-0 position-relative slider-container">
                 <div class="row">
-                    <div class="col">
-                        <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid">
+                    <div class="slider_imagenes px-0">
+                        <div class="col-12"> 
+                            <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid img-slider_principal">
+                        </div>
+                        <div class="col-12">
+                            <img src="{{ asset('img/photos/backgrounds/bg-1.jpg') }}" alt="slider" class="img-fluid img-slider_principal">
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-9 tarjeta-nosotros col-md-11 col-11 bg-white rounded shadow-lg position-absolute top-100 start-50 translate-middle border border-primary">
-                    <div class="col position-relative">
-                        <div class="row mt-5">
-                            <div class="col-11 border border-dark mx-auto">
-                                <div class="row">
-                                    <div class="col-md-6 col-12 mt-3">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-12 col-12 fs-1" style="color: #028AE8; line-height: 1;">
-                                                QUIENES SOMOS...
+                <div class="col-lg-8 tarjeta-nosotros col-md-11 col-11 bg-white shadow-lg position-absolute top-100 start-50 translate-middle" style="border-radius: 16px;">
+                    <div class="row">
+                        <div class="col position-relative">
+                            <div class="row mt-5 ms-lg-4 ms-md-0 ms-0">
+                                <div class="col-11 mx-auto">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-7 col-12 mt-lg-4 mt-md-0 mt-0">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12 col-12" style="color: #028AE8; line-height: 1; font-size: 2.6rem;">
+                                                    QUIÉNES SOMOS...
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 py-2 texto-nosotros">
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum necessitatibus aspernatur sunt sequi. Saepe voluptas pariatur a at blanditiis ex!
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-9 col-12 mt-4">
+                                                    <a href="#/" class="btn border w-100 py-2" style="background-color: #0F0743; color: #FFFFFF;">VER MÁS</a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col py-2">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum necessitatibus aspernatur sunt sequi. Saepe voluptas pariatur a at blanditiis ex!
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-9 col-12 mt-3">
-                                                <a href="#/" class="btn border w-100 py-2" style="background-color: #0F0743; color: #FFFFFF;">VER MÁS</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="row mt-md-0 mt-5">
-                                            <div class="col-md-9 col-12 ms-auto">
-                                                <img src="{{ asset('img/photos/home/Quienes_somos.png') }}" alt="quienes_somos" class="img-fluid rounded">
+                                        <div class="col-lg-6 col-md-5 col-12">
+                                            <div class="row mt-md-0 mt-4 mb-lg-0 mb-md-0 mb-5">
+                                                <div class="col-md-9 col-12 ms-auto">
+                                                    <img src="{{ asset('img/photos/home/Quienes_somos.png') }}" alt="quienes_somos" class="img-fluid w-100" style="border-radius: 16px;">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 position-absolute top-0 start-50 translate-middle py-3 border border-secondary" style="margin-top: -5rem;">
+                            <div class="col-12 position-absolute top-0 start-50 translate-middle" style="margin-top: -2rem;">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <div class="row">
+                                            <div class="col text-end">
+                                                <img src="{{ asset('img/photos/home/Flecha.png') }}" alt="" class="prev-btn" style="cursor: pointer;">
+                                            </div>
+                                            <div class="col dot-container"></div>
+                                            <div class="col text-start">
+                                                <img src="{{ asset('img/photos/home/Flecha2.png') }}" alt="" class="next-btn" style="cursor: pointer;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                         </div>
-                        <div class="col-9 position-absolute top-100 start-50 translate-middle py-2" style="
-                            margin-top: 4.25rem;    
-                            z-index: 0; 
-                            background-color: #0078C1;
-                            width: 100%;
-                            height: 0;
-                            border: 40px solid red;
-                            border-top: 0;
-                            border-bottom: 30px solid transparent;
-                        "></div>
+                    </div>
+                   
+                    <div class="col-12 mx-auto position-absolute top-100 start-0 " style="margin-top: -6px; text-align: center;">
+                        <div class="row">
+                            <div class="col-8 mx-auto">
+                                <img src="{{ asset('img/photos/home/Barra.png') }}" alt="" class="img-fluid">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="container-fluid mb-5" style="margin-top: 20rem;">
+        <div class="row">
+            <div class="col text-center display-2 fw-bolder" style="color: #0F0743;">
+                SERVICIOS
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="row">
+                    <div class="col-3 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-1 px-5 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 
 @section('scripts')
-   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slider_imagenes > div');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dotContainer = document.querySelector('.dot-container');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.style.display = 'block';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+
+            showSlide(currentSlide);
+
+            function nextSlide() {
+                currentSlide++;
+                if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide--;
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1;
+                }
+                showSlide(currentSlide);
+            }
+
+            slides.forEach((slide, i) => {
+                const dotBtn = document.createElement('img');
+                dotBtn.src = "{{ asset('img/photos/home/RomboW.png') }}";
+                dotBtn.alt = "Dot " + (i + 1);
+                dotBtn.classList.add('dot-btn');
+                dotBtn.classList.add('px-1');
+                dotBtn.addEventListener('click', () => {
+                    currentSlide = i;
+                    showSlide(currentSlide);
+                });
+                dotContainer.appendChild(dotBtn);
+            });
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        });
+    </script>
 @endsection
 
 
