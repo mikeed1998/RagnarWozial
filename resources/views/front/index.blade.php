@@ -169,10 +169,39 @@
         <div class="row">
             <div class="col-6 mx-auto">
                 <div class="row">
-                    <div class="col-3 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                    <div class="col-lg-3 col-md-6 col-11 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-1 px-5 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                    <div class="col-lg-1 col-md-2 col-4 px-5 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-9 mx-auto">
+                <div class="row">
+                    <div class="col-4 border">
+                        <div class="row">
+                            <div class="col-4 border-start border-info py-5 h-100"></div>
+                            <div class="col-4 border-start border-info py-5 h-100"></div>
+                            <div class="col-4 border-start border-info py-5 h-100"></div>
+                        </div>
+                    </div>
+                    <div class="col-8 py-5 border" style="
+                        background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        height: 460px;
+                        border-top-right-radius: 32px; 
+                        border-bottom-right-radius: 32px;
+                        filter: brightness(0.5);
+                    ">
+                        <div class="row">
+                            <div class="col">
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
