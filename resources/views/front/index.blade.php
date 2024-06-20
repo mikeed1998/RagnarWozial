@@ -5,6 +5,11 @@
 @section('extracss')
     <style>
 
+        .alto-slider_servicios--texto {
+            writing-mode: vertical-lr; 
+            transform: rotate(180deg);
+        }
+
         @media(min-width: 992px) {
             .slider-container {
                 height: 51.5rem;
@@ -25,6 +30,10 @@
                 color:#0F0743; 
                 line-height: 1.2; 
                 text-align: justify;
+            }
+
+            .alto-slider_servicios {
+                height: 460px;
             }
         } 
 
@@ -181,17 +190,58 @@
                 <div class="row">
                     <div class="col-4 border">
                         <div class="row">
-                            <div class="col-4 border-start border-info py-5 h-100"></div>
-                            <div class="col-4 border-start border-info py-5 h-100"></div>
-                            <div class="col-4 border-start border-info py-5 h-100"></div>
+                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                                <div class="row">
+                                    <div class="col border text-center fs-3 fw-bolder">
+                                        01
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                            Vigilancia y patrullaje
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                                <div class="row">
+                                    <div class="col text-center fs-3 fw-bolder">
+                                        02
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                            Monitoreo de alarmas
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                                <div class="row">
+                                    <div class="col text-center fs-3 fw-bolder">
+                                        03
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                            Protección personal
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-8 py-5 border" style="
+                    <div class="col-8 py-5 border alto-slider_servicios" style="
                         background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
                         background-position: center center;
                         background-repeat: no-repeat;
                         background-size: 100%;
-                        height: 460px;
                         border-top-right-radius: 32px; 
                         border-bottom-right-radius: 32px;
                         filter: brightness(0.5);
