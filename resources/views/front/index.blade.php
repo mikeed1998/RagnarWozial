@@ -380,6 +380,109 @@
         
     </div>
 
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col mt-5 px-0">
+                <div class="row">
+                    <div class="col position-relative" style="
+                        background-image: url('{{ asset('img/photos/home/Banner.png') }}');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                        width: 100%;
+                        height: 700px;
+                        filter: brightness(0.4);
+                    ">
+                        <div class="col-6 position-absolute top-100 start-50 translate-middle" style="margin-top: -10px;">
+                            <img src="{{ asset('img/photos/home/barra_invertida.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background-color: #028AE8;">
+        <div class="row">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col position-relative text-center">
+                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                            <img src="{{ asset('img/photos/home/Icono_01.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="row">
+                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
+                                Capacitados para la seguridad privada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col position-relative text-center">
+                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                            <img src="{{ asset('img/photos/home/Icono_02.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="row">
+                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                                Capacitados para la seguridad privada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col position-relative text-center">
+                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                            <img src="{{ asset('img/photos/home/Icono_03.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="row">
+                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                                Capacitados para la seguridad privada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col position-relative text-center">
+                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                            <img src="{{ asset('img/photos/home/Icono_04.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="row">
+                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                                Capacitados para la seguridad privada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
 
 @section('scripts')
