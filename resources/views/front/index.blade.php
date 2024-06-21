@@ -10,6 +10,15 @@
             transform: rotate(180deg);
         }
 
+        .link-slider_servicio {
+            text-decoration: none;
+            color: #0F0743;
+        }
+
+        .link-slider_servicio:hover {
+            color: #028AE8;
+        }
+
         .alto-slider_servicios: {
             color: #0F0743;
         }
@@ -186,77 +195,173 @@
         <div class="row">
             <div class="col-6 mx-auto">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-11 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                    <div class="col-lg-3 col-md-6 col-11 mx-auto" style="border-bottom: 3px solid #53D0F0;"></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-lg-1 col-md-2 col-4 px-5 mx-auto" style="border-bottom: 1px solid #028AE8;"></div>
+                    <div class="col-lg-1 col-md-2 col-4 px-5 mx-auto" style="border-bottom: 3px solid #53D0F0;"></div>
                 </div>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-8 mx-auto">
                 <div class="row">
-                    <div class="col-4 border">
+                    <div class="col-4">
                         <div class="row">
-                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
                                 <div class="row">
-                                    <div class="col border text-center fs-3 fw-bolder">
+                                    <div class="col text-center fs-3 fw-bolder">
                                         01
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
                                         <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
                                             Vigilancia y patrullaje
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                            </a>
+                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-02">
                                 <div class="row">
                                     <div class="col text-center fs-3 fw-bolder">
                                         02
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
                                         <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
                                             Monitoreo de alarmas
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4 border-start border-info border-3 alto-slider_servicios">
+                            </a>
+                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-03">
                                 <div class="row">
                                     <div class="col text-center fs-3 fw-bolder">
                                         03
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
                                         <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
+                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
                                             Protección personal
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                            background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            border-top-right-radius: 32px; 
+                            border-bottom-right-radius: 32px;
+                            filter: brightness(0.4);
+                        "></div>
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                            <div class="row">
+                                <div class="col-10 mx-auto">
+                                    <div class="row">
+                                        <div class="col-9 ms-auto">
+                                            <div class="row">
+                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                    VIGILANCIA Y PATRULLAJE
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8"></div>
+                                                <div class="col-4 px-0">
+                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 py-5 border alto-slider_servicios" style="
-                        background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: 100%;
-                        border-top-right-radius: 32px; 
-                        border-bottom-right-radius: 32px;
-                        filter: brightness(0.5);
-                    ">
-                        <div class="row">
-                            <div class="col">
-                                
+                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content d-none" id="slider-02">
+                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                            background-image: url('{{ asset('img/photos/home/Quienes_somos.png') }}');
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            border-top-right-radius: 32px; 
+                            border-bottom-right-radius: 32px;
+                            filter: brightness(0.4);
+                        "></div>
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                            <div class="row">
+                                <div class="col-10 mx-auto">
+                                    <div class="row">
+                                        <div class="col-9 ms-auto">
+                                            <div class="row">
+                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                    MONITOREO DE ALARMAS
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8"></div>
+                                                <div class="col-4 px-0">
+                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content d-none" id="slider-03">
+                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                            background-image: url('{{ asset('img/photos/home/Quienes_somos.png') }}');
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            border-top-right-radius: 32px; 
+                            border-bottom-right-radius: 32px;
+                            filter: brightness(0.4);
+                        "></div>
+                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                            <div class="row">
+                                <div class="col-10 mx-auto">
+                                    <div class="row">
+                                        <div class="col-9 ms-auto">
+                                            <div class="row">
+                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                    PROTECCIÓN PERSONAL
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8"></div>
+                                                <div class="col-4 px-0">
+                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -272,6 +377,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
 @endsection
@@ -330,6 +436,29 @@
             prevBtn.addEventListener('click', prevSlide);
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('.link-slider_servicio');
+            const sliders = document.querySelectorAll('.slider-content');
+        
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+        
+                    sliders.forEach(slider => {
+                        if (slider.id === targetId) {
+                            slider.classList.remove('d-none');
+                        } else {
+                            slider.classList.add('d-none');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+        
 @endsection
 
 
