@@ -10,6 +10,14 @@
             transform: rotate(180deg);
         }
 
+        .alto-slider_servicios: {
+            color: #0F0743;
+        }
+
+        .alto-slider_servicios:hover {
+            color: #028AE8;
+        }
+
         @media(min-width: 992px) {
             .slider-container {
                 height: 51.5rem;
@@ -33,7 +41,7 @@
             }
 
             .alto-slider_servicios {
-                height: 460px;
+                height: 410px;
             }
         } 
 
@@ -186,7 +194,7 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-9 mx-auto">
+            <div class="col-8 mx-auto">
                 <div class="row">
                     <div class="col-4 border">
                         <div class="row">
@@ -198,7 +206,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
                                              class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
                                             Vigilancia y patrullaje
                                         </div>
@@ -213,7 +221,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
                                              class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
                                             Monitoreo de alarmas
                                         </div>
@@ -228,7 +236,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col position-relative border text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -200px; margin-left: 5px;" 
+                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
                                              class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle border border-danger">
                                             Protección personal
                                         </div>
@@ -251,6 +259,15 @@
                                 
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center d-flex align-items-center justify-content-between py-3 border">
+                        <img src="{{ asset('img/photos/home/Flecha.png') }}" alt="">
+                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
+                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
+                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
+                        <img src="{{ asset('img/photos/home/Flecha2.png') }}" alt="">
                     </div>
                 </div>
             </div>
