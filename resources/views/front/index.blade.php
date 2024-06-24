@@ -3,202 +3,249 @@
 @section('title', 'Home')
 
 @section('extracss')
-    <style>
+<style>
+    /* Estilos para el carrusel */
+    .slider-nav {
+        position: relative;
+    }
 
-        .alto-slider_servicios--texto {
-            writing-mode: vertical-lr; 
-            transform: rotate(180deg);
+    /* Estilos para los dots */
+    .slider-nav .slick-dots {
+        display: flex; /* Mostrar los dots en línea */
+        justify-content: center; /* Centrar los dots horizontalmente */
+        list-style: none; /* Eliminar estilos de lista */
+        padding: 0; /* Eliminar padding de la lista */
+        margin-top: 30px; /* Espacio superior para separar del contenido */
+        cursor: pointer;
+    }
+
+    .slider-nav .slick-dots li {
+        margin: 0 5px; /* Espacio entre cada dot */
+    }
+
+    /* Estilos para las flechas */
+    .slider-nav .slick-prev,
+    .slider-nav .slick-next {
+        position: absolute; /* Posición absoluta para las flechas */
+        top: 94.5%; /* Alinear verticalmente al centro */
+        transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+        z-index: 1000; /* Z-index alto para que estén encima de los dots */
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+        padding: 0 20px; /* Espaciado interno */
+        /* border-radius: 50%; */
+        border: 0;
+        cursor: pointer; /* Cambiar cursor */
+    }
+
+    .slider-nav .slick-prev {
+        left: -30px; /* Posicionar flecha izquierda */
+    }
+
+    .slider-nav .slick-next {
+        right: -30px; /* Posicionar flecha derecha */
+    }
+
+
+    .alto-slider_servicios--texto {
+        writing-mode: vertical-lr; 
+        transform: rotate(180deg);
+    }
+
+    .link-slider_servicio {
+        text-decoration: none;
+        color: #0F0743;
+    }
+
+    .link-slider_servicio:hover {
+        color: #028AE8;
+    }
+
+    .alto-slider_servicios: {
+        color: #0F0743;
+    }
+
+    .alto-slider_servicios:hover {
+        color: #028AE8;
+    }
+
+    .imagen-media {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        filter: brightness(0.4);
+    }
+
+    .imagen-contacto {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .cont-formulario {
+        background-color: #FFFFFF;
+        border-radius: 1rem;
+        box-shadow: 0 0 3re m rgba(0, 0, 0, 0.2);
+    }
+
+    .input-group-text {
+        font-size: 0.75rem;
+        background-color: #0F0743; 
+        color: #FFFFFF;
+        border: 1px solid #0F0743;
+    }
+
+    .input-form {
+        color:#0F0743;
+        font-weight: 500;
+        border: 1px solid #0F0743;
+        outline: none;
+    }
+
+    .boton-form {
+        background-color:#028AE8; 
+        color:#FFFFFF;
+    }
+
+    .boton-form:hover {
+        background-color:#0F0743; 
+        color:#FFFFFF;
+    }
+
+    .boton-form:focus {
+        background-color:#FFFFFF; 
+        color:#000000;
+    }
+
+    @media(min-width: 992px) {
+        .slider-container {
+            height: 51.5rem;
         }
 
-        .link-slider_servicio {
-            text-decoration: none;
-            color: #0F0743;
+        .img-slider_principal {
+            width: 1800px;
+            height: 47rem;
         }
 
-        .link-slider_servicio:hover {
-            color: #028AE8;
+        .tarjeta-nosotros {
+            z-index: 9999; 
+            height: 24rem; 
+            margin-top: 3rem;
         }
 
-        .alto-slider_servicios: {
-            color: #0F0743;
+        .texto-nosotros {
+            color:#0F0743; 
+            line-height: 1.2; 
+            text-align: justify;
         }
 
-        .alto-slider_servicios:hover {
-            color: #028AE8;
+        .alto-slider_servicios {
+            height: 410px;
         }
 
         .imagen-media {
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            width: 100%;
-            filter: brightness(0.4);
+            height: 700px;
         }
 
         .imagen-contacto {
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            width: 100%;
+            height: 560px;
         }
 
-        .cont-formulario {
-            background-color: #FFFFFF;
-            border-radius: 1rem;
-            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        .contacto-grande {
+            display: show;
         }
 
-        .input-group-text {
-            font-size: 0.75rem;
-            background-color: #0F0743; 
-            color: #FFFFFF;
-            border: 1px solid #0F0743;
+        .contacto-chico {
+            display: none;
+        }
+    } 
+
+    @media(min-width: 576px) and (max-width: 992px) {
+        .slider-container {
+            height: 35rem;
         }
 
-        .input-form {
-            color:#0F0743;
-            font-weight: 500;
-            border: 1px solid #0F0743;
-            outline: none;
+        .img-slider_principal {
+            width: 1800px;
+            height: 28rem;
         }
 
-        .boton-form {
-            background-color:#028AE8; 
-            color:#FFFFFF;
+        .tarjeta-nosotros {
+            z-index: 9999; 
+            height: 18rem; 
+            margin-top: 2rem;
         }
 
-        .boton-form:hover {
-            background-color:#0F0743; 
-            color:#FFFFFF;
+        .texto-nosotros {
+            font-size: 0.9rem;
+            color:#0F0743; 
+            line-height: 1.1; 
+            text-align: justify;
         }
 
-        .boton-form:focus {
-            background-color:#FFFFFF; 
-            color:#000000;
+        .alto-slider_servicios {
+            height: 400px;
         }
 
-        @media(min-width: 992px) {
-            .slider-container {
-                height: 51.5rem;
-            }
+        .imagen-media {
+            height: 500px;
+        }   
 
-            .img-slider_principal {
-                width: 1800px;
-                height: 47rem;
-            }
-
-            .tarjeta-nosotros {
-                z-index: 9999; 
-                height: 24rem; 
-                margin-top: 3rem;
-            }
-
-            .texto-nosotros {
-                color:#0F0743; 
-                line-height: 1.2; 
-                text-align: justify;
-            }
-
-            .alto-slider_servicios {
-                height: 410px;
-            }
-
-            .imagen-media {
-                height: 700px;
-            }
-
-            .imagen-contacto {
-                height: 560px;
-            }
-
-            .contacto-grande {
-                display: show;
-            }
-
-            .contacto-chico {
-                display: none;
-            }
-        } 
-
-        @media(min-width: 576px) and (max-width: 992px) {
-            .slider-container {
-                height: 35rem;
-            }
-
-            .img-slider_principal {
-                width: 1800px;
-                height: 28rem;
-            }
-
-            .tarjeta-nosotros {
-                z-index: 9999; 
-                height: 18rem; 
-                margin-top: 2rem;
-            }
-
-            .texto-nosotros {
-                font-size: 0.9rem;
-                color:#0F0743; 
-                line-height: 1.1; 
-                text-align: justify;
-            }
-
-            .imagen-media {
-                height: 500px;
-            }   
-
-            .imagen-contacto {
-                height: 400px;
-            }
-
-            .contacto-grande {
-                display: none;
-            }
-
-            .contacto-chico {
-                display: show;
-            }
+        .imagen-contacto {
+            height: 400px;
         }
 
-        @media(min-width: 0px) and (max-width: 576px) {
-            .slider-container {
-                height: 23rem;
-            }
-
-            .img-slider_principal {
-                width: 1800px;
-                height: 16rem;
-            }
-
-            .tarjeta-nosotros {
-                z-index: 9999; 
-                height: auto; 
-                margin-top: 13rem;
-            }
-
-            .texto-nosotros {
-                font-size: 0.9rem;
-                color:#0F0743; 
-                line-height: 1.1; 
-                text-align: justify;
-            }
-
-            .imagen-media {
-                height: 300px;
-            }
-
-            .contacto-grande {
-                display: none;
-            }
-
-            .contacto-chico {
-                display: show;
-            }
+        .contacto-grande {
+            display: none;
         }
 
-        
+        .contacto-chico {
+            display: show;
+        }
+    }
 
-    </style>
+    @media(min-width: 0px) and (max-width: 576px) {
+        .slider-container {
+            height: 23rem;
+        }
+
+        .img-slider_principal {
+            width: 1800px;
+            height: 16rem;
+        }
+
+        .tarjeta-nosotros {
+            z-index: 9999; 
+            height: auto; 
+            margin-top: 13rem;
+        }
+
+        .texto-nosotros {
+            font-size: 0.9rem;
+            color:#0F0743; 
+            line-height: 1.1; 
+            text-align: justify;
+        }
+
+        .alto-slider_servicios {
+            height: 400px;
+        }
+
+        .imagen-media {
+            height: 300px;
+        }
+
+        .contacto-grande {
+            display: none;
+        }
+
+        .contacto-chico {
+            display: show;
+        }
+    }
+
+</style>
 @endsection
 
 @section('content')
@@ -287,191 +334,276 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6 mx-auto">
+            <div class="col-lg-9 col-md-11 col-11 mx-auto">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-11 mx-auto" style="border-bottom: 3px solid #53D0F0;"></div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-lg-1 col-md-2 col-4 px-5 mx-auto" style="border-bottom: 3px solid #53D0F0;"></div>
+                    <div class="slider-nav col-lg-3 col-12">
+                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
+                            <div class="row">
+                                <div class="col text-center fs-3 fw-bolder">
+                                    01
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
+                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
+                                        VIGILANCIA Y PATRULLAJE
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
+                            <div class="row">
+                                <div class="col text-center fs-3 fw-bolder">
+                                    02
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
+                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
+                                        MONITOREO DE ALARMAS
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
+                            <div class="row">
+                                <div class="col text-center fs-3 fw-bolder">
+                                    03
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
+                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
+                                        PROTECCIÓN PERSONAL
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
+                            <div class="row">
+                                <div class="col text-center fs-3 fw-bolder">
+                                    04
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
+                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
+                                        OTRO 1
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
+                            <div class="row">
+                                <div class="col text-center fs-3 fw-bolder">
+                                    05
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
+                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
+                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
+                                        OTRO 2
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slider-for col-lg-8 col-12">
+                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-top-right-radius: 32px; 
+                                border-bottom-right-radius: 32px;
+                                filter: brightness(0.4);
+                            "></div>
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
+                                                <div class="row">
+                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                        VIGILANCIA Y PATRULLAJE
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8"></div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-top-right-radius: 32px; 
+                                border-bottom-right-radius: 32px;
+                                filter: brightness(0.4);
+                            "></div>
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
+                                                <div class="row">
+                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                        MONITOREO DE ALARMAS
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8"></div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-top-right-radius: 32px; 
+                                border-bottom-right-radius: 32px;
+                                filter: brightness(0.4);
+                            "></div>
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
+                                                <div class="row">
+                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                        PROTECCIÓN PERSONAL
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8"></div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-top-right-radius: 32px; 
+                                border-bottom-right-radius: 32px;
+                                filter: brightness(0.4);
+                            "></div>
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
+                                                <div class="row">
+                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                        OTRO 1
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8"></div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
+                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
+                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-top-right-radius: 32px; 
+                                border-bottom-right-radius: 32px;
+                                filter: brightness(0.4);
+                            "></div>
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
+                                                <div class="row">
+                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
+                                                        OTRO 2
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8"></div>
+                                                    <div class="col-lg-4 col-12">
+                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-8 mx-auto">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="row">
-                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
-                                <div class="row">
-                                    <div class="col text-center fs-3 fw-bolder">
-                                        01
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                            Vigilancia y patrullaje
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-02">
-                                <div class="row">
-                                    <div class="col text-center fs-3 fw-bolder">
-                                        02
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                            Monitoreo de alarmas
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-03">
-                                <div class="row">
-                                    <div class="col text-center fs-3 fw-bolder">
-                                        03
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                        <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                             class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                            Protección personal
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
-                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                            background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            background-size: 100%;
-                            border-top-right-radius: 32px; 
-                            border-bottom-right-radius: 32px;
-                            filter: brightness(0.4);
-                        "></div>
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                            <div class="row">
-                                <div class="col-10 mx-auto">
-                                    <div class="row">
-                                        <div class="col-9 ms-auto">
-                                            <div class="row">
-                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                    VIGILANCIA Y PATRULLAJE
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-8"></div>
-                                                <div class="col-4 px-0">
-                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content d-none" id="slider-02">
-                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                            background-image: url('{{ asset('img/photos/home/Quienes_somos.png') }}');
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            background-size: 100%;
-                            border-top-right-radius: 32px; 
-                            border-bottom-right-radius: 32px;
-                            filter: brightness(0.4);
-                        "></div>
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                            <div class="row">
-                                <div class="col-10 mx-auto">
-                                    <div class="row">
-                                        <div class="col-9 ms-auto">
-                                            <div class="row">
-                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                    MONITOREO DE ALARMAS
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-8"></div>
-                                                <div class="col-4 px-0">
-                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 py-5 alto-slider_servicios position-relative slider-content d-none" id="slider-03">
-                        <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                            background-image: url('{{ asset('img/photos/home/Quienes_somos.png') }}');
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            background-size: 100%;
-                            border-top-right-radius: 32px; 
-                            border-bottom-right-radius: 32px;
-                            filter: brightness(0.4);
-                        "></div>
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                            <div class="row">
-                                <div class="col-10 mx-auto">
-                                    <div class="row">
-                                        <div class="col-9 ms-auto">
-                                            <div class="row">
-                                                <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                    PROTECCIÓN PERSONAL
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-8"></div>
-                                                <div class="col-4 px-0">
-                                                    <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 text-center d-flex align-items-center justify-content-between py-3 border">
-                        <img src="{{ asset('img/photos/home/Flecha.png') }}" alt="">
-                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
-                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
-                        <img src="{{ asset('img/photos/home/Rombo.png') }}" alt="">
-                        <img src="{{ asset('img/photos/home/Flecha2.png') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
     <div class="container-fluid mt-5">
@@ -769,27 +901,76 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll('.link-slider_servicio');
-            const sliders = document.querySelectorAll('.slider-content');
-        
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('data-target');
-        
-                    sliders.forEach(slider => {
-                        if (slider.id === targetId) {
-                            slider.classList.remove('d-none');
-                        } else {
-                            slider.classList.add('d-none');
-                        }
-                    });
-                });
+        $(document).ready(function(){
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
             });
+
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"><img src="{{ asset('img/photos/home/Flecha.png') }}"></button>',
+                nextArrow: '<button type="button" class="slick-next"><img src="{{ asset('img/photos/home/Flecha2.png') }}"></button>',
+                dots: true,
+                focusOnSelect: true,
+                customPaging: function(slider, i) {
+                    var imgNormal = '{{ asset('img/photos/home/Rombo2.png') }}';
+                    var imgActive = '{{ asset('img/photos/home/Rombo3.png') }}';
+                    return '<img src="' + imgNormal + '" class="dot-img" />';
+                }, 
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                    }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+
+            $('.slider-for').on('afterChange', function(event, slick, currentSlide, nextSlide){
+                $('.slider-nav .slick-dots li').removeClass('slick-active');
+                $('.slider-nav .slick-dots li:nth-child(' + (currentSlide + 1) + ')').addClass('slick-active');
+                updateDotsImages();
+            });
+
+            function updateDotsImages() {
+                var imgNormal = '{{ asset('img/photos/home/Rombo2.png') }}';
+                var imgActive = '{{ asset('img/photos/home/Rombo3.png') }}';
+
+                $('.slider-nav .slick-dots li').each(function(index){
+                    var dotImg = $(this).find('.dot-img');
+                    if ($(this).hasClass('slick-active')) {
+                        dotImg.attr('src', imgActive);
+                    } else {
+                        dotImg.attr('src', imgNormal);
+                    }
+                });
+            }
         });
     </script>
-        
+            
 @endsection
 
 

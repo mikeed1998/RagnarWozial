@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-6 mx-auto">
                         <div class="row">
-                            <a href="#/" class="col-3 romboide-cont">
+                            <a href="{{ route('front.home') }}" class="col-3 romboide-cont">
                                 <div class="romboide"></div>
                                 <div class="texto-menu">INICIO</div>
                             </a>
@@ -114,34 +114,34 @@
                                 <div class="bg-white position-absolute border lista-uno z-3" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
                                     <ul class="py-2" style="list-style: none;">
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SEGURIDAD PRIVADA</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SEGURIDAD PRIVADA</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> MONITOREO DE ALARMAS</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> MONITOREO DE ALARMAS</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> PROTECCIÓN PERSONAL</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> PROTECCIÓN PERSONAL</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 04</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 04</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 05</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 05</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 06</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 06</a>
                                         </li>
                                         <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">
-                                            <a href="#/" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 07</a>
+                                            <a href="{{ route('front.servicio', ['id' => 0]) }}" class="categoria-link nav-link"><i class="bi bi-chevron-right"></i> SERVICIO 07</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="#/" class="col-3 romboide-cont">
+                            <a href="{{ route('front.nosotros') }}" class="col-3 romboide-cont">
                                 <div class="romboide"></div>
                                 <div class="texto-menu">NOSOTROS</div>
                             </a>
-                            <a href="#/" class="col-3 romboide-cont">
+                            <a href="{{ route('front.contacto') }}" class="col-3 romboide-cont">
                                 <div class="romboide"></div>
                                 <div class="texto-menu">CONTACTO</div>
                             </a>
