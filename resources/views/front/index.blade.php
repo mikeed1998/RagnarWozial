@@ -27,6 +27,56 @@
             color: #028AE8;
         }
 
+        .imagen-media {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            filter: brightness(0.4);
+        }
+
+        .imagen-contacto {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .cont-formulario {
+            background-color: #FFFFFF;
+            border-radius: 1rem;
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+        }
+
+        .input-group-text {
+            font-size: 0.75rem;
+            background-color: #0F0743; 
+            color: #FFFFFF;
+            border: 1px solid #0F0743;
+        }
+
+        .input-form {
+            color:#0F0743;
+            font-weight: 500;
+            border: 1px solid #0F0743;
+            outline: none;
+        }
+
+        .boton-form {
+            background-color:#028AE8; 
+            color:#FFFFFF;
+        }
+
+        .boton-form:hover {
+            background-color:#0F0743; 
+            color:#FFFFFF;
+        }
+
+        .boton-form:focus {
+            background-color:#FFFFFF; 
+            color:#000000;
+        }
+
         @media(min-width: 992px) {
             .slider-container {
                 height: 51.5rem;
@@ -52,6 +102,22 @@
             .alto-slider_servicios {
                 height: 410px;
             }
+
+            .imagen-media {
+                height: 700px;
+            }
+
+            .imagen-contacto {
+                height: 560px;
+            }
+
+            .contacto-grande {
+                display: show;
+            }
+
+            .contacto-chico {
+                display: none;
+            }
         } 
 
         @media(min-width: 576px) and (max-width: 992px) {
@@ -76,6 +142,22 @@
                 line-height: 1.1; 
                 text-align: justify;
             }
+
+            .imagen-media {
+                height: 500px;
+            }   
+
+            .imagen-contacto {
+                height: 400px;
+            }
+
+            .contacto-grande {
+                display: none;
+            }
+
+            .contacto-chico {
+                display: show;
+            }
         }
 
         @media(min-width: 0px) and (max-width: 576px) {
@@ -99,6 +181,18 @@
                 color:#0F0743; 
                 line-height: 1.1; 
                 text-align: justify;
+            }
+
+            .imagen-media {
+                height: 300px;
+            }
+
+            .contacto-grande {
+                display: none;
+            }
+
+            .contacto-chico {
+                display: show;
             }
         }
 
@@ -384,14 +478,8 @@
         <div class="row">
             <div class="col mt-5 px-0">
                 <div class="row">
-                    <div class="col position-relative" style="
+                    <div class="col position-relative imagen-media" style="
                         background-image: url('{{ asset('img/photos/home/Banner.png') }}');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        background-size: cover;
-                        width: 100%;
-                        height: 700px;
-                        filter: brightness(0.4);
                     ">
                         <div class="col-6 position-absolute top-100 start-50 translate-middle" style="margin-top: -10px;">
                             <img src="{{ asset('img/photos/home/barra_invertida.png') }}" alt="">
@@ -404,7 +492,7 @@
 
     <div class="container-fluid py-5" style="background-color: #028AE8;">
         <div class="row">
-            <div class="col-3">
+            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -414,7 +502,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col py-2 text-center">
                         <div class="row">
                             <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
                                 Capacitados para la seguridad privada
@@ -423,7 +511,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -433,16 +521,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col py-2 text-center">
                         <div class="row">
-                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
                                 Capacitados para la seguridad privada
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -452,16 +540,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col py-2 text-center">
                         <div class="row">
-                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
                                 Capacitados para la seguridad privada
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -471,10 +559,150 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col py-2 text-center">
                         <div class="row">
-                            <div class="col-6 mx-auto" style="color:#0F0743; font-weight:700;">
+                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
                                 Capacitados para la seguridad privada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid contacto-grande">
+        <div class="row">
+            <div class="col px-0">
+                <div class="row">
+                    <div class="col position-relative imagen-contacto" style="
+                        background-image: url('{{ asset('img/photos/home/Contacto.png') }}');
+                    ">
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-md-12 col-12 py-5"></div>
+                            <div class="col-lg-9 col-md-9 col-11 mx-auto">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-12 col-11 cont-formulario py-5 mx-auto">
+                                        <div class="row">
+                                            <div class="col-10 px-0 py-5 mx-auto">
+                                                <div class="row">
+                                                    <div class="col fs-2 py-2" style="color: #0F0743;">
+                                                        PONTE EN CONTACTO
+                                                    </div>
+                                                </div>
+                                                <form action="" method="POST" class="row form-group" id="fomulario-home_grande">
+                                                    @csrf
+                                                    <div class="col-lg-6 col-12">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text col-lg-4 col-md-3 col-4" id="group-nombre">NOMBRE</span>
+                                                            <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text col-lg-4 col-md-3 col-4" id="group-empresa">EMPRESA</span>
+                                                            <input required type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text col-lg-4 col-md-3 col-4" id="group-email">EMAIL</span>
+                                                            <input required type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text col-lg-4 col-md-3 col-4" id="group-whatsapp">WHATSAPP</span>
+                                                            <input required type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text col-lg-2 col-md-3 col-4" id="group-whatsapp">MENSAJE</span>
+                                                            <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-12 text-center mx-auto">
+                                                                <input type="submit" class="btn btn-outline w-100 boton-form" value="ENVIAR">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid contacto-chico">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col px-0">
+                        <img src="{{ asset('img/photos/home/Contacto.png') }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9 col-12 mx-auto">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-12 col-11 cont-formulario py-5 mx-auto shadow">
+                                <div class="row">
+                                    <div class="col-10 px-0 py-5 mx-auto">
+                                        <div class="row">
+                                            <div class="col fs-2 py-2" style="color: #0F0743;">
+                                                PONTE EN CONTACTO
+                                            </div>
+                                        </div>
+                                        <form action="" method="POST" class="row form-group" id="fomulario-home_chico">
+                                            @csrf
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text col-md-4 col-4" id="group-nombre">NOMBRE</span>
+                                                    <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text col-md-4 col-4" id="group-empresa">EMPRESA</span>
+                                                    <input required type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text col-md-4 col-4" id="group-email">EMAIL</span>
+                                                    <input required type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text col-md-4 col-4" id="group-whatsapp">WHATSAPP</span>
+                                                    <input required type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text col-md-2 col-4" id="group-whatsapp">MENSAJE</span>
+                                                    <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-12 text-center mx-auto">
+                                                        <input type="submit" class="btn btn-outline w-100 boton-form" value="ENVIAR">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
