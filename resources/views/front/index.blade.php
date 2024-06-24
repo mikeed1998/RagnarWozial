@@ -159,6 +159,10 @@
         .contacto-chico {
             display: none;
         }
+
+        .container-servicios {
+            margin-top: 20rem;
+        }
     } 
 
     @media(min-width: 576px) and (max-width: 992px) {
@@ -203,6 +207,10 @@
         .contacto-chico {
             display: show;
         }
+
+        .container-servicios {
+            margin-top: 16rem;
+        }
     }
 
     @media(min-width: 0px) and (max-width: 576px) {
@@ -242,6 +250,10 @@
 
         .contacto-chico {
             display: show;
+        }
+
+        .container-servicios {
+            margin-top: 40rem;
         }
     }
 
@@ -327,9 +339,9 @@
         </div>
     </div>
 
-    <div class="container-fluid mb-5" style="margin-top: 20rem;">
+    <div class="container-fluid container-servicios mb-5">
         <div class="row">
-            <div class="col text-center display-2 fw-bolder" style="color: #0F0743;">
+            <div class="col text-center py-lg-3 py-5 display-2 fw-bolder" style="color: #0F0743;">
                 SERVICIOS
             </div>
         </div>
@@ -928,21 +940,21 @@
                     {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                     }
                     },
                     {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 5,
                         slidesToScroll: 1
                     }
                     },
                     {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 5,
                         slidesToScroll: 1
                     }
                     }
