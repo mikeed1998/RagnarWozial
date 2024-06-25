@@ -340,11 +340,25 @@
     </div>
 
     <div class="container-fluid container-servicios mb-5">
-        <div class="row">
-            <div class="col text-center py-lg-3 py-5 display-2 fw-bolder" style="color: #0F0743;">
-                SERVICIOS
+        <div class="row mb-5">
+            <div class="col">
+                <div class="row">
+                    <div class="col text-center py-lg-3 py-2 display-2 fw-bolder" style="color: #0F0743;">
+                        SERVICIOS
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-9 mx-auto" style="border-bottom: 3px solid #0287DA;"> </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-1 col-md-2 col-4 mx-auto" style="border-bottom: 3px solid #0287DA;"> </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>  
         <div class="row">
             <div class="col-lg-9 col-md-11 col-11 mx-auto">
                 <div class="row">
@@ -636,7 +650,7 @@
 
     <div class="container-fluid py-5" style="background-color: #028AE8;">
         <div class="row">
-            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
+            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -655,7 +669,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
+            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -674,7 +688,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
+            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -693,7 +707,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-12 py-lg-0 py-md-3 py-3">
+            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
                 <div class="row">
                     <div class="col position-relative text-center">
                         <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
