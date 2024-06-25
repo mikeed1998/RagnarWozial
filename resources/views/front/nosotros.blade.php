@@ -5,6 +5,10 @@
 @section('extracss')
     <style>
 
+        body {
+            overflow-x: hidden;
+        }
+
         .descripcion-nosotros {
             text-align: justify; 
             color:#0F0743; 
@@ -28,6 +32,10 @@
 
             .valores-grande { display: block; }
             .valores-chico { display: none; }
+
+            .barra-contacto {
+                margin-top: 10px;
+            }
         }
 
         @media(min-width: 576px) and (max-width: 992px) {
@@ -37,6 +45,10 @@
 
             .valores-grande { display: block; }
             .valores-chico { display: none; }
+
+            .barra-contacto {
+                margin-top: 10px;
+            }
         }
 
         @media(min-width: 0px) and (max-width: 576px) {
@@ -46,6 +58,10 @@
 
             .valores-grande { display: none; }
             .valores-chico { display: block; }
+
+            .barra-contacto {
+                margin-top: 14px;
+            }
         }
 
         
@@ -269,7 +285,7 @@
         <div class="row">
             <div class="col position-relative">
                 <div class="col-12 m-0 position-absolute bottom-100 start-0 text-center">
-                    <img src="{{ asset('img/photos/home/Barra_invertida.png') }}" alt="" class="img-fluid" style="margin-top: 10px;">
+                    <img src="{{ asset('img/photos/home/Barra_invertida.png') }}" alt="" class="img-fluid barra-contacto">
                 </div>
                 <div class="row py-5">
                     <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
