@@ -243,9 +243,9 @@
         <div class="row" style="background-color:#0F0743;">
             <div class="col contenedor-dos">
                 <div class="row">
-                    <div class="col border text-white text-center">
+                    <div class="col text-white text-center">
                         <div class="row">
-                            <div class="col-12 text-center border py-3">
+                            <div class="col-12 text-center py-3">
                                 <a href="#/" class="boton-link">
                                     <i class="bi bi-whatsapp fs-2 px-1"></i>
                                 </a>
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                         <div class="row contacto-grande">
-                            <div class="col-lg-6 col-md-10 col-12 mx-auto border py-3">
+                            <div class="col-lg-6 col-md-10 col-12 mx-auto py-3">
                                 <div class="row">
                                     <div class="col-12 position-relative">
                                         <div class="col-12 position-absolute top-0 start-0 text-white z-3 letras-center">
@@ -280,7 +280,7 @@
                             </div>
                         </div>
                         <div class="row contacto-chico">
-                            <div class="col-12 mx-auto border py-3">
+                            <div class="col-12 mx-auto py-3">
                                 <div class="row">
                                     <div class="col-12 position-relative">
                                         <div class="col-12 position-absolute top-0 start-0 text-white z-3 letras-center">
@@ -304,7 +304,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-9 col-9 mx-auto border py-3 fs-bolder">
+                            <div class="col-lg-3 col-md-9 col-9 mx-auto py-3 fs-bolder">
                                 <div class="row">
                                     <div class="col-2 text-end">
                                         <img src="{{ asset('img/photos/contacto/gps.png') }}" alt="" class="img-fluid">

@@ -1,3 +1,16 @@
+<style>
+    
+    .icono-footer {
+        color: #028AE8;
+        text-decoration: none;
+    }
+
+    .icono-footer:hover {
+        color: #FFFFFF;
+    }
+
+</style>
+
 <footer>
     <div class="container-fluid">
         <div class="row" style="background-color: #0F0743;">>
@@ -35,9 +48,15 @@
                             <div class="col-12 mt-3" style="font-size: 0.8rem;">Tel. 3333333333</div>
                             <div class="col-12" style="font-size: 0.8rem;">Email: contacto@ragnar.com</div>
                             <div class="col-12" style="font-size: 0.8rem;">
-                                <i class="bi bi-whatsapp fs-4 px-1"></i>
-                                <i class="bi bi-facebook fs-4 px-1"></i>
-                                <i class="bi bi-instagram fs-4 px-1"></i>
+                                <a href="#/">
+                                    <i class="bi bi-whatsapp fs-4 px-1 icono-footer"></i>
+                                </a>
+                                <a href="#/">
+                                    <i class="bi bi-facebook fs-4 px-1 icono-footer"></i>
+                                </a>
+                                <a href="#/">
+                                    <i class="bi bi-instagram fs-4 px-1 icono-footer"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

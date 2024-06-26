@@ -9,7 +9,7 @@
         .portada-servicio {
             background-position: center center;
             background-repeat: no-repeat; 
-            background-size: 100%;
+            background-size: cover;
             width: 100%;
         }
 
@@ -86,16 +86,16 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-9 col-md-11 col-11 mt-5 mb-5 py-5 mx-auto descripcion-servicio">
+            <div class="col-lg-9 col-md-11 col-11 mt-5 mb-5 mx-auto descripcion-servicio">
                 <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga, debitis eos neque repudiandae ab dolores quibusdam alias voluptate non soluta aliquam ipsam adipisci et animi id, quas sint cumque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aliquam aliquid dolorum omnis ut debitis voluptate velit autem, ea eos, dicta assumenda a placeat possimus quam sequi dolor incidunt sunt!</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum, repudiandae obcaecati perferendis deleniti dolore?. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id ea beatae perspiciatis velit facere.</p>
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-lg-4 col-md-6 col-9 mx-auto mt-5 mb-5">
+            <div class="col-lg-4 col-md-6 col-9 mx-auto mb-5">
                 <a href="{{ route('front.contacto') }}" class="col-3 romboide-cont_servicio">
                     <div class="romboide_servicio"></div>
-                    <div class="texto-menu fs-3 text-white fw-bolder">COTIZAR</div>
+                    <div class="texto-menu fs-3 text-white fw-bolder d-flex align-items-center justify-content-center">COTIZAR</div>
                 </a>
             </div>
         </div>

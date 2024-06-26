@@ -26,6 +26,15 @@
         cursor: pointer;
     }
 
+    .icono-link_header {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .icono-link_header:hover {
+        color: #008AE2;
+    }
+
     @media(min-width: 992px) {
         .header-xl { display: show; }
         .header-xs { display: none; }
@@ -150,14 +159,14 @@
                     <div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-whatsapp text-white fs-5 px-0"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-whatsapp fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-facebook text-white fs-5 px-0"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-facebook fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-instagram text-white fs-5 px-0"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-instagram fs-5 px-1 icono-link_header"></i>
                                 </a>
                             </div>
                         </div>
@@ -209,14 +218,14 @@
                     <li class="nav-item">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-whatsapp text-white fs-5"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-whatsapp fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-facebook text-white fs-5"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-facebook fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" class="btn btn-outline border-none">
-                                    <i class="bi bi-instagram text-white fs-5"></i>
+                                <a href="#/" style="text-decoration: none;">
+                                    <i class="bi bi-instagram fs-5 px-1 icono-link_header"></i>
                                 </a>
                             </div>
                         </div>
