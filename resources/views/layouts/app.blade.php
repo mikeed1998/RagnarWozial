@@ -37,6 +37,7 @@
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
+            overflow-x: hidden;
         }
     </style>
 

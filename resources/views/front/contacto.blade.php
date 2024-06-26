@@ -109,7 +109,7 @@
             }
 
             .contenedor-form_contacto {
-                height: 32rem;
+                height: 34rem;
                 border-radius: 2rem;
                 margin-top: 12rem;
             }
@@ -138,7 +138,7 @@
             }
 
             .contenedor-form_contacto {
-                height: 32rem;
+                height: 34rem;
                 border-radius: 0rem;
                 margin-top: 16rem;
             }
@@ -194,43 +194,38 @@
                                 @csrf
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-lg-4 col-md-3 col-4 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
+                                        <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
                                         <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-lg-4 col-md-3 col-4 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
+                                        <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
                                         <input required type="text" name="empresa" class="form-control input-form col89 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-lg-4 col-md-3 col-4 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
+                                        <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
                                         <input required type="text" name="email" class="form-control input-form col-98shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-lg-4 col-md-3 col-4 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
+                                        <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
                                         <input required type="number" name="whatsapp" class="form-control input-form 8ol-9 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-lg-2 col-md-3 col-4 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
-                                        <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="input-group mb-3">
+                                        <span class="input-group-text col-lg-2 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
                                         <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-lg-3 col-12 text-center mx-auto">
-                                            <input type="submit" class="btn btn-outline w-100 boton-form" value="ENVIAR">
+                                            <input type="submit" class="btn btn-outline w-100 boton-form py-3" value="ENVIAR">
                                         </div>
                                     </div>
                                 </div>

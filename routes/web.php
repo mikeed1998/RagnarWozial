@@ -16,6 +16,15 @@
     Route::get('/contacto', 'FrontController@contacto')->name('front.contacto');
     Route::get('/servicios', 'FrontController@servicios')->name('front.servicios');
     Route::get('/servicio_detalle/{id}', 'FrontController@servicio')->name('front.servicio');
+    Route::get('/aviso_privacidad', 'FrontController@aviso_privacidad')->name('front.aviso_privacidad');
+    Route::get('/metodos_pago', 'FrontController@metodos_pago')->name('front.metodos_pago');
+    Route::get('/devoluciones', 'FrontController@devoluciones')->name('front.devoluciones');
+    Route::get('/terminos_condiciones', 'FrontController@terminos_condiciones')->name('front.terminos_condiciones');
+    Route::get('/garantias', 'FrontController@garantias')->name('front.garantias');
+    Route::get('/politicas_envio', 'FrontController@politicas_envio')->name('front.politicas_envio');
+    Route::get('/faqs', 'FrontController@faqs')->name('front.faqs');
+    Route::post('/formularioContact', 'FrontController@formularioContact')->name('formularioContact');
+
     Route::post('/proxy', 'ProxyController@proxy')->name('proxy');
  
     Route::get('/admin', 'FrontController@admin')->name('front.admin')->middleware('checkAdminAccess');
