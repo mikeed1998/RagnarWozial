@@ -184,8 +184,8 @@
 
     .file-upload label, .file-upload2 label {
         display: inline-block;
-        background-color:#028AE8;
-        color: #fff;
+        background-color:#fff700;
+        color: #000000;
         padding: 6px 12px;
         cursor: pointer;
         border-radius: 4px;
@@ -208,9 +208,32 @@
     .file-upload input[type="file"]:focus + label, .file-upload2 input[type="file"]:focus + label,
     .file-upload input[type="file"] + label:hover, .file-upload2 input[type="file"] + label:hover {
         backdrop-filter: blur(5px);
-        background-color: #53D0F0;
+        background-color: #FFFFFF;
         opacity: 100%;
         transition: all 0.5s;
+    }
+</style>
+
+
+<style>
+    .contacto_c {
+        position: relative;
+    }
+
+    .oculto_e {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 9999; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .contacto_c:hover .oculto_e {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
     }
 </style>
 
@@ -243,8 +266,8 @@
             </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col position-relative">
+        <div class="row contacto_c">
+            <div class="col position-relative ">
                 <div class="col-lg-8 col-md-11 col-12 bg-white position-absolute top-0 start-50 translate-middle py-3 contenedor-form_contacto">
                     <div class="col-12 text-center position-absolute top-100 start-0">
                         <div class="row">
@@ -265,37 +288,37 @@
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
-                                        <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                        <input disabled type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
-                                        <input required type="text" name="empresa" class="form-control input-form col89 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                        <input disabled type="text" name="empresa" class="form-control input-form col89 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
-                                        <input required type="text" name="email" class="form-control input-form col-98shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                        <input disabled type="text" name="email" class="form-control input-form col-98shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
-                                        <input required type="number" name="whatsapp" class="form-control input-form 8ol-9 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                        <input disabled type="number" name="whatsapp" class="form-control input-form 8ol-9 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-lg-2 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
-                                        <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                        <input disabled type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-lg-3 col-12 text-center mx-auto">
-                                            <input type="submit" class="btn btn-outline w-100 boton-form py-3" value="ENVIAR">
+                                            <input disabled type="submit" class="btn btn-outline w-100 boton-form py-3" value="ENVIAR">
                                         </div>
                                     </div>
                                 </div>
@@ -323,7 +346,7 @@
                             </div>
                         </div>
                         <div class="row contacto-grande">
-                            <div class="col-lg-6 col-md-10 col-12 mx-auto py-3">
+                            <div class="col-lg-9 col-md-10 col-12 mx-auto py-3">
                                 <div class="row">
                                     <div class="col-12 position-relative">
                                         <div class="col-12 position-absolute top-0 start-0 text-white z-3 letras-center">
@@ -385,7 +408,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col position-relative contacto_c">
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_e z-3">
+                    <div class="row h-100">
+                        <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                            <a href="{{ route('seccion.show', ['slug' => 'configuracion']) }}" class="btn btn-light fs-1 p-2 w-100">Editar en Configuración</a>
+                        </div>
+                    </div>
+                </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.6745427148135!2d-103.39920042561187!3d20.642118580912236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae0ed241a9bb%3A0xbb4c3906c38265fd!2sWozial%20Marketing%20Lovers!5e0!3m2!1ses-419!2smx!4v1719427426099!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

@@ -279,8 +279,8 @@
 
     .file-upload label, .file-upload2 label {
         display: inline-block;
-        background-color:#028AE8;
-        color: #fff;
+        background-color:#fff700;
+        color: #000000;
         padding: 6px 12px;
         cursor: pointer;
         border-radius: 4px;
@@ -303,11 +303,78 @@
     .file-upload input[type="file"]:focus + label, .file-upload2 input[type="file"]:focus + label,
     .file-upload input[type="file"] + label:hover, .file-upload2 input[type="file"] + label:hover {
         backdrop-filter: blur(5px);
-        background-color: #53D0F0;
+        background-color: #FFFFFF;
         opacity: 100%;
         transition: all 0.5s;
     }
 </style>
+
+<style>
+    .slider_c {
+        position: relative;
+    }
+
+    .oculto {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 3; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .slider_c:hover .oculto {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
+    }
+</style>
+
+<style>
+    .servicios_c {
+        position: relative;
+    }
+
+    .oculto_b {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 3; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .servicios_c:hover .oculto_b {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
+    }
+</style>
+
+<style>
+    .contacto_c {
+        position: relative;
+    }
+
+    .oculto_c {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 3; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .contacto_c:hover .oculto_c {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
+    }
+</style>
+
 
 @endsection
 
@@ -318,9 +385,15 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row slider_c">
             <div class="col position-relative">
-                <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto z-3"></div>
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto z-3 mt-5">
+                    <div class="row h-100">
+                        <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                            <a href="{{ route('seccion.show', ['slug' => 'sliders']) }}" class="btn btn-light fs-1 p-2 w-100">Editar en sliders</a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="row">
                     <div class="col px-0 position-relative slider-container">
@@ -432,9 +505,15 @@
                 </div>
             </div>
         </div>  
-        <div class="row">
+        <div class="row servicios_c">
             <div class="col-lg-9 col-md-11 col-11 mx-auto position-relative">
-                <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto py-5 z-3"></div>
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_b z-3">
+                    <div class="row h-100">
+                        <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                            <a href="{{ route('seccion.show', ['slug' => 'servicios']) }}" class="btn btn-light fs-1 p-2 w-100">Editar en servicios</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="slider-nav col-lg-3 col-12">
                         @php
@@ -643,9 +722,15 @@
                         <div class="row mt-5">
                             <div class="col-lg-3 col-md-12 col-12 py-5"></div>
                             <div class="col-lg-9 col-md-9 col-11 mx-auto">
-                                <div class="row">
+                                <div class="row contacto_c">
                                     <div class="col-lg-8 col-md-12 col-11 cont-formulario py-3 mx-auto position-relative">
-                                        <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto py-5 z-3"></div>
+                                        <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_c z-3">
+                                            <div class="row h-100">
+                                                <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                                                    <a href="#/" class="btn btn-danger fs-1 p-2 w-100">No es editable</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-10 px-0 py-3 mx-auto">
                                                 <div class="row">

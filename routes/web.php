@@ -9,7 +9,9 @@
     use Illuminate\App\Http\Controllers\EmpresaController;
     use Illuminate\App\Http\Controllers\GaleriaController;
     use Illuminate\App\Http\Controllers\ServicioController;
+    use Illuminate\App\Http\Controllers\CapacitacionController;
     use Illuminate\App\Http\Controllers\ProxyController;
+   
 
 
     Route::get('/', 'FrontController@index')->name('front.home');
@@ -82,6 +84,13 @@
             Route::get('/edit/{servicio}', 'ServicioController@edit')->name('servicio.edit');
             Route::put('/update/{servicio}', 'ServicioController@update')->name('servicio.update');
             Route::delete('/destroy/{servicio}', 'ServicioController@destroy')->name('servicio.destroy');
+        });
+
+        Route::prefix('capacitacion')->name('capacitacion.')->group(function(){
+            Route::get('/', 'CapacitacionController@index')->name('capacitacion.index');
+            Route::post('/store', 'CapacitacionController@store')->name('capacitacion.store');
+            Route::put('/update/{capacitacion}', 'CapacitacionController@update')->name('capacitacion.update');
+            Route::delete('/destroy/{capacitacion}', 'CapacitacionController@destroy')->name('capacitacion.destroy');
         });
 
         Route::prefix('secciones')->name('seccion.')->group(function(){

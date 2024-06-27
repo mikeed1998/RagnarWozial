@@ -102,8 +102,8 @@
 
     .file-upload label, .file-upload2 label {
         display: inline-block;
-        background-color:#b1d5ef;
-        color: #fff;
+        background-color:#fff700;
+        color: #000000;
         padding: 6px 12px;
         cursor: pointer;
         border-radius: 4px;
@@ -126,9 +126,31 @@
     .file-upload input[type="file"]:focus + label, .file-upload2 input[type="file"]:focus + label,
     .file-upload input[type="file"] + label:hover, .file-upload2 input[type="file"] + label:hover {
         backdrop-filter: blur(5px);
-        background-color: #d3eaf0;
+        background-color: #FFFFFF;
         opacity: 100%;
         transition: all 0.5s;
+    }
+</style>
+
+<style>
+    .galeria_c {
+        position: relative;
+    }
+
+    .oculto_d {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 3; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .galeria_c:hover .oculto_d {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
     }
 </style>
 
@@ -320,15 +342,22 @@
             </div>
         </div>   
         <div class="row">
-            <div class="col-11 mx-auto mt-5 mb-5">
+            <div class="col-11 mx-auto mt-5 mb-5 galeria_c position-relative">
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_d z-3">
+                    <div class="row h-100">
+                        <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                            <a href="{{ route('seccion.show', ['slug' => 'galeria']) }}" class="btn btn-light fs-1 p-2 w-100">Editar en Galeria</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
-                    @foreach ($galerias as $g)
+                    @for ($i = 0; $i < 6; $i++) 
                         <div class="col-lg-4 col-6 px-1 py-1">
                             <div class="card rounded-0">
-                                <img src="{{ asset('img/photos/galerias/'.$g->imagen) }}" alt="imagen-galeria" class="img-fluid">
+                                <img src="{{ asset('img/photos/galerias/27002.jpg') }}" alt="imagen-galeria" class="img-fluid">
                             </div>
                         </div>
-                    @endforeach
+                    @endfor
                 </div>
             </div>    
         </div> 
