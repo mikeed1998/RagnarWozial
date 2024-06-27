@@ -25,7 +25,7 @@
 
     {{-- <div id="summernote">Hello Summernote</div> --}}
 
-    <div class="container-fluid bg-white py-5">
+    <div class="container-fluid bg-white py-5 mb-5">
         <div class="row">
             <div class="col display-5 text-center fw-bolder">
                 Editar Servicio   

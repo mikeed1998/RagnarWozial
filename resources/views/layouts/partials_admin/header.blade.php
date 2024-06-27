@@ -5,7 +5,7 @@
 			color: #222;
 		}
 	</style>
-	<nav class="navbar py-2 row fixed-top navbar-expand-lg scrolling-navbar mx-3 mt-1" style="box-shadow: none; background: black; color: #222; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); border-radius: 16px; height: 50px;">
+	<nav class="navbar py-2 row fixed-top navbar-expand-lg scrolling-navbar mx-3 mt-1" style="z-index: 9999;box-shadow: none; background: black; color: #222; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); border-radius: 16px; height: 50px;">
 
         <div class="row px-5">
             <div class="col-md-6 col-12 text-white text-start">

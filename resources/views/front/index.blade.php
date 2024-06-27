@@ -163,6 +163,10 @@
         .container-servicios {
             margin-top: 20rem;
         }
+
+        .barra-home {
+            margin-top: 1px;
+        }
     } 
 
     @media(min-width: 576px) and (max-width: 992px) {
@@ -211,6 +215,10 @@
         .container-servicios {
             margin-top: 16rem;
         }
+
+        .barra-home {
+            margin-top: 5px;
+        }
     }
 
     @media(min-width: 0px) and (max-width: 576px) {
@@ -254,6 +262,10 @@
 
         .container-servicios {
             margin-top: 40rem;
+        }
+
+        .barra-home {
+            margin-top: 10px;
         }
     }
 
@@ -444,8 +456,8 @@
                     <div class="col position-relative imagen-media" style="
                         background-image: url('{{ asset('img/photos/home/Banner.png') }}');
                     ">
-                        <div class="col-6 position-absolute top-100 start-50 translate-middle" style="margin-top: -10px;">
-                            <img src="{{ asset('img/photos/home/barra_invertida.png') }}" alt="">
+                        <div class="col-lg-6 col-md-9 col-11 position-absolute top-100 start-50 translate-middle" style="margin-top: -10px;">
+                            <img src="{{ asset('img/photos/home/barra_invertida.png') }}" alt="" class="img-fluid barra-home">
                         </div>
                     </div>
                 </div>
