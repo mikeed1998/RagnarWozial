@@ -143,13 +143,13 @@
                     <div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="http://wa.me/{{ $config->whatsapp }}" style="text-decoration: none;">
                                     <i class="bi bi-whatsapp fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="{{ $config->facebook }}" style="text-decoration: none;">
                                     <i class="bi bi-facebook fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="{{ $config->instagram }}" style="text-decoration: none;">
                                     <i class="bi bi-instagram fs-5 px-1 icono-link_header"></i>
                                 </a>
                             </div>
@@ -173,7 +173,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item texto-header">
-                        <a class="nav-link text-white" aria-current="page" href="#">INICIO</a>
+                        <a class="nav-link text-white" aria-current="page" href="{{ route('front.home') }}">INICIO</a>
                     </li>
                     <li class="nav-item texto-header-servicios">
                         <a class="nav-link text-white" aria-current="page" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -182,33 +182,29 @@
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body bg-transparent border border-white">
                                 <div class="">
-                                    <a href="#" class="list-group-item lista-categoria">SEGURIDAD PRIVADA</a>
-                                    <a href="#" class="list-group-item lista-categoria">MONITOREO DE ALARMAS</a>
-                                    <a href="#" class="list-group-item lista-categoria">PROTECCIÓN PERSONAL</a>
-                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 04</a>
-                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 05</a>
-                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 06</a>
-                                    <a href="#" class="list-group-item lista-categoria">SERVICIO 07</a>
+                                    @foreach ($servicios as $s2)
+                                        <a href="{{ route('front.servicio', ['id' => $s2->id]) }}" class="list-group-item lista-categoria">{{ $s2->titulo }}</a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item texto-header">
-                        <a class="nav-link text-white" aria-current="page" href="#">NOSOTROS</a>
+                        <a class="nav-link text-white" aria-current="page" href="{{ route('front.nosotros') }}">NOSOTROS</a>
                     </li>
                     <li class="nav-item texto-header">
-                        <a class="nav-link text-white" aria-current="page" href="#">CONTACTO</a>
+                        <a class="nav-link text-white" aria-current="page" href="{{ route('front.contacto') }}">CONTACTO</a>
                     </li>
                     <li class="nav-item">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="http://wa.me/{{ $config->whatsapp }}" style="text-decoration: none;">
                                     <i class="bi bi-whatsapp fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="{{ $config->facebook }}" style="text-decoration: none;">
                                     <i class="bi bi-facebook fs-5 px-1 icono-link_header"></i>
                                 </a>
-                                <a href="#/" style="text-decoration: none;">
+                                <a href="{{ $config->instagram }}" style="text-decoration: none;">
                                     <i class="bi bi-instagram fs-5 px-1 icono-link_header"></i>
                                 </a>
                             </div>
