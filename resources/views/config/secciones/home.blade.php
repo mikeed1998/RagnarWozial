@@ -319,21 +319,29 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col px-0 position-relative slider-container">
+            <div class="col position-relative">
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto z-3"></div>
+                
                 <div class="row">
-                    <div class="slider_imagenes px-0">
-                        @forelse ($sliders as $sp)
-                            <div class="col-12"> 
-                                <img src="{{ asset('img/photos/sliders/'.$sp->imagen) }}" alt="slider" class="img-fluid img-slider_principal">
+                    <div class="col px-0 position-relative slider-container">
+                        
+                        <div class="row">
+                            <div class="slider_imagenes px-0">
+                                @forelse ($sliders as $sp)
+                                    <div class="col-12"> 
+                                        <img src="{{ asset('img/photos/sliders/'.$sp->imagen) }}" alt="slider" class="img-fluid img-slider_principal">
+                                    </div>
+                                @empty
+                                    <div class="col-12"> 
+                                        <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid img-slider_principal">
+                                    </div>
+                                @endforelse
                             </div>
-                        @empty
-                            <div class="col-12"> 
-                                <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid img-slider_principal">
-                            </div>
-                        @endforelse
+                        </div>
+                    
                     </div>
-                </div>
-               
+        
+                </div>   
             </div>
         </div>
 
@@ -425,7 +433,8 @@
             </div>
         </div>  
         <div class="row">
-            <div class="col-lg-9 col-md-11 col-11 mx-auto">
+            <div class="col-lg-9 col-md-11 col-11 mx-auto position-relative">
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto py-5 z-3"></div>
                 <div class="row">
                     <div class="slider-nav col-lg-3 col-12">
                         @php
@@ -635,7 +644,8 @@
                             <div class="col-lg-3 col-md-12 col-12 py-5"></div>
                             <div class="col-lg-9 col-md-9 col-11 mx-auto">
                                 <div class="row">
-                                    <div class="col-lg-8 col-md-12 col-11 cont-formulario py-3 mx-auto">
+                                    <div class="col-lg-8 col-md-12 col-11 cont-formulario py-3 mx-auto position-relative">
+                                        <div class="col-12 position-absolute top-0 bottom-0 start-0 bg-dark border oculto py-5 z-3"></div>
                                         <div class="row">
                                             <div class="col-10 px-0 py-3 mx-auto">
                                                 <div class="row">
@@ -705,9 +715,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-9 col-12 mx-auto">
+                    <div class="col-lg-9 col-12 mx-auto position-relative">
                         <div class="row">
-                            <div class="col-lg-8 col-md-12 col-11 cont-formulario py-5 mx-auto shadow">
+                            <div class="col-lg-8 col-md-12 col-11 cont-formulario py-5 mx-auto shadow position-relative">
+                                
                                 <div class="row">
                                     <div class="col-10 px-0 py-5 mx-auto">
                                         <div class="row">
@@ -837,9 +848,7 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
-            arrows: true,
-            prevArrow: '<button type="button" class="slick-prev"><img src="{{ asset('img/photos/home/Flecha.png') }}"></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src="{{ asset('img/photos/home/Flecha2.png') }}"></button>',
+            arrows: false,
             dots: true,
             focusOnSelect: true,
             customPaging: function(slider, i) {
