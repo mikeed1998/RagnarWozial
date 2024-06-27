@@ -30,7 +30,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[0]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[0]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[0]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -43,7 +43,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[1]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[1]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[1]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -56,7 +56,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[2]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[2]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[2]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -69,7 +69,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[3]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[3]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[3]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -82,7 +82,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[4]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[4]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[4]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -95,7 +95,7 @@
 					@csrf
 					@method('put')
 					<label for="descripcion" class="fs-3 fw-bolder py-2">{{$politicas[5]->titulo}}</label>
-					<textarea class="form-control" name="descripcion" id="descripcion" rows="10">{{$politicas[5]->descripcion}}</textarea>
+					<textarea class="form-control summernote" name="descripcion" id="descripcion" rows="10">{{$politicas[5]->descripcion}}</textarea>
 					<div class="form-group text-center mt-3">
 						<button type="submit" class="btn btn-primary w-100 rounded-0">Guardar</button>
 					</div>
@@ -107,6 +107,22 @@
 @endsection
 
 @section('extraJS')
+	<script>
+		$('.summernote').summernote({
+			placeholder: 'Hello stand alone ui',
+			tabsize: 2,
+			height: 300,
+			toolbar: [
+				['style', ['style']],
+				['font', ['bold', 'underline', 'clear']],
+				['color', ['color']],
+				['para', ['ul', 'ol', 'paragraph']],
+				['table', ['table']],
+			//   ['insert', ['link', 'picture', 'video']],
+			//   ['view', ['fullscreen', 'codeview', 'help']]
+			]
+		});
+	</script>
     <script>
         tinymce.init({
             selector: 'textarea',

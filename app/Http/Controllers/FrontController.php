@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\Configuracion;
 use App\Seccion;
 use App\Elemento;
-use App\Politica;
-use App\Servicio;
-use App\SliderPrincipal;
 use App\Faq;
+use App\Politica;
 use App\Empresa;
+use App\SliderPrincipal;
+use App\Servicio;
+use App\Galeria;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -26,10 +27,9 @@ class FrontController extends Controller
         $config = Configuracion::first();
         $elements = Elemento::all();
         $slider_principal = SliderPrincipal::all();
-        $empresas = Empresa::all();
-        $servicios = Servicio::where('inicio', 1)->get()->toBase();
+        $servicios_home = Servicio::where('inicio', 1)->get()->toBase();
 
-        return view('front.index', compact('config', 'elements', 'slider_principal', 'empresas', 'servicios'));
+        return view('front.index', compact('config', 'elements', 'slider_principal', 'servicios_home'));
     }
 
     public function admin() {
@@ -39,10 +39,9 @@ class FrontController extends Controller
     public function nosotros() {
         $config = Configuracion::first();
         $elements = Elemento::all();
-        $servicios = Servicio::all();
-        $empresas = Empresa::all();
+        $galerias = Galeria::all();
 
-        return view('front.nosotros', compact('config', 'servicios', 'elements', 'empresas'));
+        return view('front.nosotros', compact('config', 'elements', 'galerias'));
     }
 
     public function contacto() {
@@ -157,12 +156,12 @@ class FrontController extends Controller
 
 
 			if($mail->send()){
-				dd('paso culo');
+				// dd('paso culo');
                 //Contacto@dineroorganico.com
                 \Toastr::success('Correo enviado Exitosamente!');
 				return redirect()->back();
 			}else{
-				dd('no paso culo');
+				// dd('no paso culo');
 				\Toastr::error('Error al enviar el correo');
 				return redirect()->back();
 			}
@@ -175,6 +174,20 @@ class FrontController extends Controller
 			\Toastr::error($e->getMessage());//Boring error messages from anything else!
 			return redirect()->back();
 		}
+    }
+
+    public function mailtest() {
+        $data = array(
+			'tipoForm' => 0,
+			'nombre' => 'Michael Eduardo Sandoval Pérez',
+			'empresa' => 'Wozial Marketing Lovers',
+			'email' => 'mikeed1998@gmail.com',
+            'whatsapp' => '3322932239',
+			'mensaje' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+			'hoy' => Carbon::now()->format('d-m-Y')
+		);
+
+        return view('front.mailtest', compact('data'));
     }
 }
 

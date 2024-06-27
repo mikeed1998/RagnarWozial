@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Politica;
+use Brian2694\Toastr\Facades\Toastr;
 
 class PoliticasController extends Controller
 {
@@ -33,6 +34,7 @@ class PoliticasController extends Controller
         $politica = Politica::find($id);
         $politica->descripcion = $request->descripcion;
         $politica->update();
+        \Toastr::success('Política actualizada');
         return redirect()->back();
     }
 

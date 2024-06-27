@@ -246,36 +246,13 @@
         <div class="row">
             <div class="col-11 mx-auto mt-5 mb-5">
                 <div class="row">
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_01.png') }}" alt="imagen-galeria" class="img-fluid">
+                    @foreach ($galerias as $g)
+                        <div class="col-lg-4 col-6 px-1 py-1">
+                            <div class="card rounded-0">
+                                <img src="{{ asset('img/photos/galerias/'.$g->imagen) }}" alt="imagen-galeria" class="img-fluid">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_02.png') }}" alt="imagen-galeria" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_03.png') }}" alt="imagen-galeria" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_03.png') }}" alt="imagen-galeria" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_02.png') }}" alt="imagen-galeria" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-6 px-1 py-1">
-                        <div class="card rounded-0">
-                            <img src="{{ asset('img/photos/nosotros/Galeria_01.png') }}" alt="imagen-galeria" class="img-fluid">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>    
         </div> 

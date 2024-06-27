@@ -11,6 +11,7 @@ use App\Politica;
 use App\Empresa;
 use App\SliderPrincipal;
 use App\Servicio;
+use App\Galeria;
 
 class SeccionController extends Controller
 {
@@ -35,6 +36,7 @@ class SeccionController extends Controller
         $empresas = Empresa::all();
         $politicas = Politica::all();
         $servicios = Servicio::all();
+        $galerias = Galeria::all();
 
         if($seccion->seccion == 'configuracion') { 
             $ruta = 'config.general.contacto';
@@ -46,7 +48,7 @@ class SeccionController extends Controller
             $ruta = 'config.secciones.'.$seccion->seccion;
         }
 
-        return view($ruta, compact('seccion', 'config', 'elem_general', 'faqs', 'politicas', 'elements', 'servicios', 'sliders', 'empresas'));
+        return view($ruta, compact('seccion', 'config', 'elem_general', 'faqs', 'politicas', 'elements', 'servicios', 'sliders', 'empresas', 'galerias'));
     }
 
     public function textglobalseccion(Request $request){

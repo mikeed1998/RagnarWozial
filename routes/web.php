@@ -7,6 +7,7 @@
     use Illuminate\App\Http\Controllers\Auth\LoginController;
     use Illuminate\App\Http\Controllers\SliderPrincipalController;
     use Illuminate\App\Http\Controllers\EmpresaController;
+    use Illuminate\App\Http\Controllers\GaleriaController;
     use Illuminate\App\Http\Controllers\ServicioController;
     use Illuminate\App\Http\Controllers\ProxyController;
 
@@ -24,6 +25,7 @@
     Route::get('/politicas_envio', 'FrontController@politicas_envio')->name('front.politicas_envio');
     Route::get('/faqs', 'FrontController@faqs')->name('front.faqs');
     Route::post('/formularioContact', 'FrontController@formularioContact')->name('formularioContact');
+    Route::get('/mailtest', 'FrontController@mailtest')->name('mailtest');
 
     Route::post('/proxy', 'ProxyController@proxy')->name('proxy');
  
@@ -52,7 +54,7 @@
             Route::get('/show/{id}','FAQController@show')->name('show');
             Route::get('/edit/{id}','FAQController@edit')->name('edit');
             Route::put('/update/{id}','FAQController@update')->name('update');
-            Route::delete('/destoy','FAQController@destroy')->name('destroy');
+            Route::delete('/destoy/{id}','FAQController@destroy')->name('destroy');
         });
 
         Route::prefix('slider')->name('slider.')->group(function(){
@@ -65,6 +67,12 @@
             Route::get('/', 'EmpresaController@index')->name('empresa.index');
             Route::post('/store', 'EmpresaController@store')->name('empresa.store');
             Route::delete('/destroy/{empresa}', 'EmpresaController@destroy')->name('empresa.destroy');
+        });
+
+        Route::prefix('galeria')->name('galeria.')->group(function(){
+            Route::get('/', 'GaleriaController@index')->name('galeria.index');
+            Route::post('/store', 'GaleriaController@store')->name('galeria.store');
+            Route::delete('/destroy/{galeria}', 'GaleriaController@destroy')->name('galeria.destroy');
         });
 
         Route::prefix('servicio')->name('servicio.')->group(function(){

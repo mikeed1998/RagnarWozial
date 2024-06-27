@@ -76,7 +76,7 @@
             <div class="col">
                 <div class="row">
                     <div class="col w-100 position-relative portada-servicio" style="
-                        background-image: url('{{ asset('img/photos/servicio/Banner.png') }}');
+                        background-image: url('{{ asset('img/photos/servicios/'.$servicio->portada) }}');
                     ">
                         <div class="col-12 text-center position-absolute top-100 start-0 barra-portada">
                             <img src="{{ asset('img/photos/servicio/barra2.png') }}" alt="" class="img-fluid">
@@ -87,8 +87,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-lg-9 col-md-11 col-11 mt-5 mb-5 mx-auto descripcion-servicio">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga, debitis eos neque repudiandae ab dolores quibusdam alias voluptate non soluta aliquam ipsam adipisci et animi id, quas sint cumque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aliquam aliquid dolorum omnis ut debitis voluptate velit autem, ea eos, dicta assumenda a placeat possimus quam sequi dolor incidunt sunt!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum, repudiandae obcaecati perferendis deleniti dolore?. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id ea beatae perspiciatis velit facere.</p>
+                {!! $servicio->descripcion !!}
             </div>
         </div>
         <div class="row mb-5">

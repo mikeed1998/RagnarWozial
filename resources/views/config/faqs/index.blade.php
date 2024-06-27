@@ -28,79 +28,74 @@
         </div>
     </div>
 
-    <div class="accordion sortable" data-table="Faq" id="acordionfaqs">
-		@foreach ($faqs as $f)
-            <div class="card" data-card="{{$f->id}}">
-                <div class="row">
-                    <div class="col-9">
-                        <a href="{{ route('faqs.show', ['id' => $f->id]) }}" class="btn btn-link btn-block py-0 text-left fs-5" >
-							{{ $f->pregunta}}
-						</a>
-                    </div>
-                    <div class="col-3">
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="{{ route('faqs.edit', ['id' => $f->id]) }}" class="btn btn-sm btn-info text-right w-100 rounded-0">
-                                    <i class="bi bi-pencil-square fs-5"></i>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-sm btn-danger text-right w-100 rounded-0" data-toggle="modal" data-target="#frameModalDel" data-id="{{$f->id}}">
-                                    <i class="bi bi-trash fs-5"></i>
-                                </button>
-                            </div>
+    @foreach ($faqs as $f)
+        <div class="card" data-card="{{ $f->id }}">
+            <div class="row">
+                <div class="col-9">
+                    <a href="{{ route('faqs.show', ['id' => $f->id]) }}" class="btn btn-link btn-block py-0 text-left fs-5">
+                        {{ $f->pregunta }}
+                    </a>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="{{ route('faqs.edit', ['id' => $f->id]) }}" class="btn btn-sm btn-info text-right w-100 rounded-0">
+                                <i class="bi bi-pencil-square fs-5"></i>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-sm btn-danger text-right w-100 rounded-0" onclick="confirmDeletion({{ $f->id }})">
+                                <i class="bi bi-trash fs-5"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-			<div class="card mb-3" data-card="{{$f->id}}">
-
-				<div id="collapse{{$f->id}}" class="collapse" aria-labelledby="heading{{$f->id}}" data-parent="#acordionfaqs">
-					<div class="card-body text-justify">
-						{!! $f->respuesta!!}
-					</div>
-				</div>
-			</div>
-		@endforeach
-	</div>
-
-	<div class="modal fade bottom" id="frameModalDel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-frame modal-top" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="row d-flex justify-content-center align-items-center">
-						<p class="pt-3 pr-2">
-							Eliminar Pregunta?
-						</p>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-						<button type="button" class="btn red darken-3 text-white delslide">Eliminar</button>
-						<form id="preguntadel" action="{{ route('faqs.destroy', ['faq' => 1]) }}" method="POST" style="display: none;">
-								@csrf
-								 @method('delete')
-								<input type="hidden" id="iqdel" name="pregunta" value="">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+    @endforeach
 
 @endsection
 
 @section('extraJS')
-<script type="text/javascript">
-    $(document).ready(function() {
+    <script type="text/javascript">
+        function confirmDeletion(id) {
+            Swal.fire({
+                title: '¿Deseas eliminar está pregunta?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, eliminarla!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '{{ route("faqs.destroy", ":id") }}'.replace(':id', id),
+                        type: 'DELETE',
+                        data: {
+                            _token: $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function(response) {
+                            Swal.fire(
+                                'Eliminado!',
+                                'La pregunta ha sido eliminada.',
+                                'success'
+                            );
+                            // Remove the card
+                            $('div[data-card="' + id + '"]').remove();
+                        },
+                        error: function(response) {
+                            Swal.fire(
+                                'Error!',
+                                'Hubo un problema al eliminar la pregunta.',
+                                'error'
+                            );
+                        }
+                    });
 
-        $('.fa-trash-alt').parent().click(function(e) {
-            var id = $(this).attr('data-id');
-            $("#iqdel").val(id);
-        });
-
-        $('.delslide').click(function(e) {
-            $('#preguntadel').submit();
-        });
-
-    });
-</script>
+                }
+            });
+        }
+    </script>
 @endsection
-

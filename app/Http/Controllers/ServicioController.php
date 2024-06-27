@@ -75,6 +75,7 @@ class ServicioController extends Controller
         $img = 'img/photos/servicios/'.$servicio->portada;
         unlink($img);
         $servicio->delete();
+        \Toastr::success('Servicio eliminado');
         return redirect()->back();
     }
     

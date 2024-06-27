@@ -34,10 +34,10 @@
 					</div>
 					<div class="form-group">
 						<label for="respuesta">Respuesta</label>
-						<textarea name="respuesta" id="respuesta" rows="10" class="form-control" style="resize:none;"></textarea>
+						<textarea name="respuesta" id="respuesta" rows="10" class="form-control summernote" style="resize:none;"></textarea>
 					</div>
 					<div class="form-group text-center">
-						<button type="submit" class="btn btn-primary">Guardar</button>
+						<button type="submit" class="btn btn-dark mt-3 rounded-0 w-100">Guardar</button>
 					</div>
 				</form>
 			</div>
@@ -47,6 +47,21 @@
 @endsection
 
 @section('extraJS')
-
+	<script>
+		$('.summernote').summernote({
+			placeholder: 'Hello stand alone ui',
+			tabsize: 2,
+			height: 300,
+			toolbar: [
+				['style', ['style']],
+				['font', ['bold', 'underline', 'clear']],
+				['color', ['color']],
+				['para', ['ul', 'ol', 'paragraph']],
+				['table', ['table']],
+			//   ['insert', ['link', 'picture', 'video']],
+			//   ['view', ['fullscreen', 'codeview', 'help']]
+			]
+		});
+	</script>
 @endsection
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Faq;
+use Brian2694\Toastr\Facades\Toastr;
 
 class FAQController extends Controller
 {
@@ -23,7 +24,8 @@ class FAQController extends Controller
         $faq->pregunta = $request->pregunta;
         $faq->respuesta = $request->respuesta;
         $faq->save();
-
+    
+        \Toastr::success('Pregunta creada');
         return redirect()->route('faqs.index');
     }
 
@@ -44,11 +46,18 @@ class FAQController extends Controller
         $faq->respuesta = $request->respuesta;
         $faq->update();
 
+        \Toastr::success('Pregunta actualizada');
         return redirect()->route('faqs.index');
     }
 
     public function destroy($id) {
         $faq = Faq::find($id);
-        $faq->delete();
+        if ($faq) {
+            $faq->delete();
+            \Toastr::success('Pregunta eliminada');
+            return response()->json(['success' => true]);
+        } else {
+            return response()->json(['success' => false, 'message' => 'Pregunta no encontrada'], 404);
+        }
     }
 }

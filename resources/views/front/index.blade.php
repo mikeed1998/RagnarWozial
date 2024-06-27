@@ -267,12 +267,15 @@
             <div class="col px-0 position-relative slider-container">
                 <div class="row">
                     <div class="slider_imagenes px-0">
-                        <div class="col-12"> 
-                            <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid img-slider_principal">
-                        </div>
-                        <div class="col-12">
-                            <img src="{{ asset('img/photos/backgrounds/bg-1.jpg') }}" alt="slider" class="img-fluid img-slider_principal">
-                        </div>
+                        @forelse ($slider_principal as $sp)
+                            <div class="col-12"> 
+                                <img src="{{ asset('img/photos/sliders/'.$sp->imagen) }}" alt="slider" class="img-fluid img-slider_principal">
+                            </div>
+                        @empty
+                            <div class="col-12"> 
+                                <img src="{{ asset('img/photos/home/Slider.png') }}" alt="slider" class="img-fluid img-slider_principal">
+                            </div>
+                        @endforelse
                     </div>
                 </div>
                 <div class="col-lg-8 tarjeta-nosotros col-md-11 col-11 bg-white shadow-lg position-absolute top-100 start-50 translate-middle" style="border-radius: 16px;">
@@ -363,86 +366,35 @@
             <div class="col-lg-9 col-md-11 col-11 mx-auto">
                 <div class="row">
                     <div class="slider-nav col-lg-3 col-12">
+                        @php
+                            $cont = 1;
+                        @endphp
+                        @foreach ($servicios_home as $s_nav)
                         <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
                             <div class="row">
                                 <div class="col text-center fs-3 fw-bolder">
-                                    01
+                                    {{ $cont++ }}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
                                     <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
                                          class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                        VIGILANCIA Y PATRULLAJE
+                                        {{ $s_nav->titulo }}
                                     </div>
                                 </div>
                             </div>
                         </a>
-                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
-                            <div class="row">
-                                <div class="col text-center fs-3 fw-bolder">
-                                    02
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                        MONITOREO DE ALARMAS
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
-                            <div class="row">
-                                <div class="col text-center fs-3 fw-bolder">
-                                    03
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                        PROTECCIÓN PERSONAL
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
-                            <div class="row">
-                                <div class="col text-center fs-3 fw-bolder">
-                                    04
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                        OTRO 1
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
-                            <div class="row">
-                                <div class="col text-center fs-3 fw-bolder">
-                                    05
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col position-relative text-center d-flex aling-items-center justify-content-center alto-slider_servicios--texto">
-                                    <div style="height: 400px; text-transform: uppercase; margin-top: -160px; margin-left: 5px;" 
-                                         class="col-4 fs-5 fw-bolder position-absolute top-0 start-50 translate-middle">
-                                        OTRO 2
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        @endforeach
+                        
+                        
                     </div>
                     <div class="slider-for col-lg-8 col-12">
+                        
+                        @foreach ($servicios_home as $serv)
                         <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
                             <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
+                                background-image: url('{{ asset('img/photos/servicios/'.$serv->portada) }}');
                                 background-position: center center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -457,18 +409,18 @@
                                             <div class="col-lg-9 col-md-12 col-12 ms-auto">
                                                 <div class="row">
                                                     <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                        VIGILANCIA Y PATRULLAJE
+                                                        {{ $serv->titulo }}
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
+                                                        {!! $serv->descripcion !!}
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-8"></div>
                                                     <div class="col-lg-4 col-12">
-                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                        <a href="{{ route('front.servicio', ['id' => $serv->id]) }}" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -477,154 +429,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
-                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                                background-position: center center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                border-top-right-radius: 32px; 
-                                border-bottom-right-radius: 32px;
-                                filter: brightness(0.4);
-                            "></div>
-                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                                <div class="row">
-                                    <div class="col-10 mx-auto">
-                                        <div class="row">
-                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
-                                                <div class="row">
-                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                        MONITOREO DE ALARMAS
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-8"></div>
-                                                    <div class="col-lg-4 col-12">
-                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
-                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                                background-position: center center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                border-top-right-radius: 32px; 
-                                border-bottom-right-radius: 32px;
-                                filter: brightness(0.4);
-                            "></div>
-                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                                <div class="row">
-                                    <div class="col-10 mx-auto">
-                                        <div class="row">
-                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
-                                                <div class="row">
-                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                        PROTECCIÓN PERSONAL
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-8"></div>
-                                                    <div class="col-lg-4 col-12">
-                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
-                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                                background-position: center center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                border-top-right-radius: 32px; 
-                                border-bottom-right-radius: 32px;
-                                filter: brightness(0.4);
-                            "></div>
-                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                                <div class="row">
-                                    <div class="col-10 mx-auto">
-                                        <div class="row">
-                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
-                                                <div class="row">
-                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                        OTRO 1
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-8"></div>
-                                                    <div class="col-lg-4 col-12">
-                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
-                            <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
-                                background-image: url('{{ asset('img/photos/home/Vigilancia.png') }}');
-                                background-position: center center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                border-top-right-radius: 32px; 
-                                border-bottom-right-radius: 32px;
-                                filter: brightness(0.4);
-                            "></div>
-                            <div class="col-12 position-absolute top-50 start-50 translate-middle z-3">
-                                <div class="row">
-                                    <div class="col-10 mx-auto">
-                                        <div class="row">
-                                            <div class="col-lg-9 col-md-12 col-12 ms-auto">
-                                                <div class="row">
-                                                    <div class="col text-white fs-1 text-end" style="line-height: 1.1;">
-                                                        OTRO 2
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, natus! Lorem ipsum dolor sit amet. Quia est explicabo corporis maiores molestias? Ad nostrum blanditiis odit tempore labore.
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-8"></div>
-                                                    <div class="col-lg-4 col-12">
-                                                        <a href="#/" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         
                     </div>
                 </div>

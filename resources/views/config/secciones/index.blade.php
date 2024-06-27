@@ -50,7 +50,7 @@
             </div>
         @endif
 		@foreach ($seccion as $card)
-            @if($card->slug != 'archivados' && $card->slug != 'archivadosc')
+            @if($card->slug != 'archivados' && $card->slug != 'archivadosc' && $card->slug != 'empresas')
                 <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 p-2">
                     <a href="{{route('seccion.show',$card->slug)}}"  class="card h-100 card1" style="box-shadow: none; border-radius: 16px;">
                         <span class="card-body text-muted text-center">
