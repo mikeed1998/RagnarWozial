@@ -118,6 +118,27 @@
         color:#000000;
     }
 
+    .boton-link {
+        background-color: #0F0743;
+        color: #FFFFFF;
+    }
+
+    .boton-link:hover {
+        background-color: #0287DA;
+        color: #FFFFFF;
+    }
+
+    .boton-servicio {
+        background-color: #0F0743;
+        color: #FFFFFF;
+    }
+
+    .boton-servicio:hover {
+        background-color: #FFFFFF;
+        font-weight: 700;
+        color: #0F0743;
+    }
+
     @media(min-width: 992px) {
         .slider-container {
             height: 51.5rem;
@@ -270,6 +291,17 @@
     }
 
 </style>
+
+<style>
+    .dot-btn {
+        width: 16px; /* Ajusta el tamaño según sea necesario */
+        height: 16px;
+    }
+
+    .dot-btn.active {
+        content: url('{{ asset('img/photos/home/RomboW.png') }}');
+    }
+</style>
 @endsection
 
 @section('content')
@@ -309,7 +341,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-lg-5 col-md-9 col-12 mt-4">
-                                                    <a href="#/" class="btn border w-100 py-2" style="background-color: #0F0743; color: #FFFFFF;">VER MÁS</a>
+                                                    <a href="#/" class="btn border w-100 py-2 boton-link">VER MÁS</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -338,6 +370,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             
                         </div>
                     </div>
@@ -381,7 +414,7 @@
                         @php
                             $cont = 1;
                         @endphp
-                        @foreach ($servicios_home as $s_nav)
+                        @forelse ($servicios as $s_nav)
                         <a href="#/" class="col-4 border-start border-info border-3 alto-slider_servicios link-slider_servicio" data-target="slider-01">
                             <div class="row">
                                 <div class="col text-center fs-3 fw-bolder">
@@ -397,13 +430,21 @@
                                 </div>
                             </div>
                         </a>
-                        @endforeach
+                        @empty
+                            <div class="row">
+                                <div class="col">
+                                    No hay servicios
+                                </div>
+                            </div>
+                        @endforelse
                         
                         
                     </div>
+                        
+                   
                     <div class="slider-for col-lg-8 col-12">
                         
-                        @foreach ($servicios_home as $serv)
+                        @forelse ($servicios as $serv)
                         <div class="col-8 py-5 alto-slider_servicios position-relative slider-content" id="slider-01">
                             <div class="col-12 position-absolute top-0 start-0 alto-slider_servicios" style="
                                 background-image: url('{{ asset('img/photos/servicios/'.$serv->portada) }}');
@@ -432,7 +473,7 @@
                                                 <div class="row">
                                                     <div class="col-8"></div>
                                                     <div class="col-lg-4 col-12">
-                                                        <a href="{{ route('front.servicio', ['id' => $serv->id]) }}" class="btn btn-outline text-white py-2 w-100" style="background-color: #028AE8;">VER MÁS</a>
+                                                        <a href="{{ route('front.servicio', ['id' => $serv->id]) }}" class="btn btn-outline boton-servicio py-2 w-100">VER MÁS</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -441,7 +482,13 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                        @empty
+                            <div class="row">
+                                <div class="col">
+                                   
+                                </div>
+                            </div>
+                        @endforelse
                         
                     </div>
                 </div>
@@ -467,82 +514,27 @@
 
     <div class="container-fluid py-5" style="background-color: #028AE8;">
         <div class="row">
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_01.png') }}" alt="">
+            @foreach ($capacitaciones as $cap)
+                <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
+                    <div class="row">
+                        <div class="col position-relative text-center">
+                            <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                            <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                <img src="{{ asset('img/photos/capacitaciones/'.$cap->icono) }}" alt="" class="img-fluid">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
+                    <div class="row">
+                        <div class="col py-2 text-center">
+                            <div class="row">
+                                <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
+                                    {{ $cap->texto }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_02.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_03.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_04.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -690,59 +682,72 @@
 @endsection
 
 @section('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slider_imagenes > div');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const dotContainer = document.querySelector('.dot-container');
-            let currentSlide = 0;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slider_imagenes > div');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const dotContainer = document.querySelector('.dot-container');
+        let currentSlide = 0;
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    if (i === index) {
-                        slide.style.display = 'block';
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-            }
-
-            showSlide(currentSlide);
-
-            function nextSlide() {
-                currentSlide++;
-                if (currentSlide >= slides.length) {
-                    currentSlide = 0;
-                }
-                showSlide(currentSlide);
-            }
-
-            function prevSlide() {
-                currentSlide--;
-                if (currentSlide < 0) {
-                    currentSlide = slides.length - 1;
-                }
-                showSlide(currentSlide);
-            }
-
+        function showSlide(index) {
             slides.forEach((slide, i) => {
-                const dotBtn = document.createElement('img');
-                dotBtn.src = "{{ asset('img/photos/home/RomboW.png') }}";
-                dotBtn.alt = "Dot " + (i + 1);
-                dotBtn.classList.add('dot-btn');
-                dotBtn.classList.add('px-1');
-                dotBtn.addEventListener('click', () => {
-                    currentSlide = i;
-                    showSlide(currentSlide);
-                });
-                dotContainer.appendChild(dotBtn);
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
             });
+            updateDots();
+        }
 
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
+        function updateDots() {
+            const dots = dotContainer.querySelectorAll('.dot-btn');
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        }
+
+        slides.forEach((slide, i) => {
+            const dotBtn = document.createElement('img');
+            dotBtn.src = "{{ asset('img/photos/home/Rombo.png') }}";
+            dotBtn.alt = "Dot " + (i + 1);
+            dotBtn.classList.add('dot-btn');
+            dotBtn.classList.add('mx-2');
+            dotBtn.addEventListener('click', () => {
+                currentSlide = i;
+                showSlide(currentSlide);
+            });
+            dotContainer.appendChild(dotBtn);
         });
-    </script>
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Initialize dots
+        showSlide(currentSlide);
+    });
+</script>
 
     <script>
         $(document).ready(function(){

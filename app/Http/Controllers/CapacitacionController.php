@@ -38,6 +38,15 @@ class CapacitacionController extends Controller
     }
 
     public function destroy(Capacitacion $capacitacion) {
-
+        try {
+            \Storage::disk('local')->delete("img/photos/capacitaciones/" . $capacitacion->icono);
+    
+            $capacitacion->delete();
+    
+            return response()->json(['success' => true, 'message' => 'Capacitación eliminada con éxito.']);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'message' => 'Ocurrió un error al eliminar la capacitación.']);
+        }
     }
+    
 }

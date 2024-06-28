@@ -12,6 +12,7 @@ use App\Empresa;
 use App\SliderPrincipal;
 use App\Servicio;
 use App\Galeria;
+use App\Capacitacion;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -27,9 +28,16 @@ class FrontController extends Controller
         $config = Configuracion::first();
         $elements = Elemento::all();
         $slider_principal = SliderPrincipal::all();
-        $servicios_home = Servicio::where('inicio', 1)->get()->toBase();
+        $capacitaciones = Capacitacion::all();
 
-        return view('front.index', compact('config', 'elements', 'slider_principal', 'servicios_home'));
+        $servicios = Servicio::where('inicio', 1)->get()->toBase();
+        foreach ($servicios as $serv) {
+            if (strlen($serv->descripcion) > 300) {
+                $serv->descripcion = substr($serv->descripcion, 0, 300) . '...';
+            }
+        }
+
+        return view('front.index', compact('config', 'elements', 'slider_principal', 'servicios', 'capacitaciones'));
     }
 
     public function admin() {
@@ -40,8 +48,9 @@ class FrontController extends Controller
         $config = Configuracion::first();
         $elements = Elemento::all();
         $galerias = Galeria::all();
+        $capacitaciones = Capacitacion::all();
 
-        return view('front.nosotros', compact('config', 'elements', 'galerias'));
+        return view('front.nosotros', compact('config', 'elements', 'galerias', 'capacitaciones'));
     }
 
     public function contacto() {
@@ -153,20 +162,13 @@ class FrontController extends Controller
 			$mail->msgHTML($html);
 			// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-
-
 			if($mail->send()){
-				// dd('paso culo');
-                //Contacto@dineroorganico.com
                 \Toastr::success('Correo enviado Exitosamente!');
 				return redirect()->back();
 			}else{
-				// dd('no paso culo');
 				\Toastr::error('Error al enviar el correo');
 				return redirect()->back();
 			}
-
-
 		} catch (phpmailerException $e) {
 			\Toastr::error($e->errorMessage());//Pretty error messages from PHPMailer
 			return redirect()->back();

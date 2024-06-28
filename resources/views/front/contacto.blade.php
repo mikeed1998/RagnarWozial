@@ -241,13 +241,13 @@
                     <div class="col text-white text-center">
                         <div class="row">
                             <div class="col-12 text-center py-3">
-                                <a href="#/" class="boton-link">
+                                <a href="http://wa.me/{{ $config->whatsapp }}" class="boton-link">
                                     <i class="bi bi-whatsapp fs-2 px-1"></i>
                                 </a>
-                                <a href="#/" class="boton-link">
+                                <a href="{{ $config->facebook }}" class="boton-link">
                                     <i class="bi bi-facebook fs-2 px-1"></i>
                                 </a>
-                                <a href="#/" class="boton-link">
+                                <a href="{{ $config->instagram }}" class="boton-link">
                                     <i class="bi bi-instagram fs-2 px-1"></i>
                                 </a>
                             </div>
@@ -259,10 +259,10 @@
                                         <div class="col-12 position-absolute top-0 start-0 text-white z-3 letras-center">
                                             <div class="row">
                                                 <div class="col-6 text-center fs-5 fw-bolder d-flex align-items-center justify-content-center" style="color: #0F0743;">
-                                                    CONTACTO@RAGNAR.COM
+                                                    {{ $config->destinatario }}
                                                 </div>
                                                 <div class="col-6 text-center fs-5 fw-bolder d-flex align-items-center justify-content-center" style="color: #0F0743;">
-                                                    TEL. 3322332233
+                                                    TEL. {{ $config->whatsapp }}
                                                 </div>
                                             </div>
                                         </div>
@@ -281,11 +281,11 @@
                                         <div class="col-12 position-absolute top-0 start-0 text-white z-3 letras-center">
                                             <div class="row">
                                                 <div class="col-12 text-center fw-bolder d-flex align-items-center justify-content-center" style="color: #0F0743;">
-                                                    CONTACTO@RAGNAR.COM
+                                                    {{ $config->destinatario }}
                                                 </div>
                                                 <div class="col-12 mt-5 text-center fw-bolder d-flex align-items-center justify-content-center" style="color: #0F0743;">
                                                     <div class="col-12 mt-4">
-                                                        TEL. 3322332233
+                                                        TEL. {{ $config->whatsapp }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -305,7 +305,7 @@
                                         <img src="{{ asset('img/photos/contacto/gps.png') }}" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-10 text-start">
-                                        Av. Lapizlazuli 2074, 44560 Guadalajara, Jal.
+                                        {{ $config->direccion }}
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +316,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.6745427148135!2d-103.39920042561187!3d20.642118580912236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae0ed241a9bb%3A0xbb4c3906c38265fd!2sWozial%20Marketing%20Lovers!5e0!3m2!1ses-419!2smx!4v1719427426099!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                {!! $config->mapa !!}
             </div>
         </div>
     </div>

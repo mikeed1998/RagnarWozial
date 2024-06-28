@@ -9,6 +9,14 @@
         color: #FFFFFF;
     }
 
+    .link-footer {
+        color: #FFFFFF;
+    }
+
+    .link-footer:hover {
+        color: #028AE8;
+    }
+
 </style>
 
 <footer>
@@ -31,10 +39,10 @@
                                     <div class="col-2 border-2 border-bottom border-primary"></div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-3" style="font-size: 0.8rem;">Inicio</div>
-                            <div class="col-12" style="font-size: 0.8rem;">Servicios</div>
-                            <div class="col-12" style="font-size: 0.8rem;">Nosotros</div>
-                            <div class="col-12" style="font-size: 0.8rem;">Contacto</div>
+                            <a href="{{ route('front.home') }}" class="col-12 link-footer text-decoration-none mt-3" style="font-size: 0.8rem;">Inicio</a>
+                            <a href="{{ route('front.home') }}" class="col-12 link-footer text-decoration-none" style="font-size: 0.8rem;">Servicios</a>
+                            <a href="{{ route('front.nosotros') }}" class="col-12 link-footer text-decoration-none" style="font-size: 0.8rem;">Nosotros</a>
+                            <a href="{{ route('front.contacto') }}" class="col-12 link-footer text-decoration-none" style="font-size: 0.8rem;">Contacto</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-11 text-white mx-auto py-3">
@@ -45,16 +53,16 @@
                                     <div class="col-2 border-2 border-bottom border-primary"></div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-3" style="font-size: 0.8rem;">Tel. 3333333333</div>
-                            <div class="col-12" style="font-size: 0.8rem;">Email: contacto@ragnar.com</div>
+                            <div class="col-12 mt-3" style="font-size: 0.8rem;">Tel. {{ $config->whatsapp }}</div>
+                            <div class="col-12" style="font-size: 0.8rem;">Email: {{ $config->destinatario }}</div>
                             <div class="col-12" style="font-size: 0.8rem;">
-                                <a href="#/">
+                                <a href="http://wa.me/{{ $config->whatsapp }}">
                                     <i class="bi bi-whatsapp fs-4 px-1 icono-footer"></i>
                                 </a>
-                                <a href="#/">
+                                <a href="{{ $config->facebook }}">
                                     <i class="bi bi-facebook fs-4 px-1 icono-footer"></i>
                                 </a>
-                                <a href="#/">
+                                <a href="{{ $config->instagram }}">
                                     <i class="bi bi-instagram fs-4 px-1 icono-footer"></i>
                                 </a>
                             </div>

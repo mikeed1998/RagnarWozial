@@ -120,7 +120,7 @@
                             <div class="col-3 romboide-cont romboide-servicio position-relative">
                                 <div class="romboide"></div>
                                 <div class="texto-menu">SERVICIOS</div>
-                                <div class="bg-white position-absolute border lista-uno z-3" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
+                                <div class="bg-white position-absolute lista-uno z-3" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
                                     <ul class="py-2" style="list-style: none;">
                                         @foreach ($servicios as $serv_header)
                                             <li class="py-2" style="font-size: 1.25rem; font-weight: 600;">

@@ -41,7 +41,7 @@
     <div class="container-fluid py-5 mb-5" style="background-color: #028AE8;">
         <div class="row">
             @foreach ($capacitaciones as $cap)
-                <div class="col-xl-3 col-md-6 col-6 py-lg-3 py-md-3 py-3">
+                <div class="col-xl-3 col-md-6 col-6 py-lg-3 py-md-3 py-3 position-relative">
                     <div class="row">
                         <div class="col position-relative text-center">
                             <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
@@ -59,6 +59,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 text-center position-absolute top-0 end-0 translate-middle-y">
+                        <button class="btn btn-danger rounded btn-eliminar" data-id="{{ $cap->id }}">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                    
                 </div>
             @endforeach
         </div>
@@ -97,6 +103,48 @@
 @endsection
 
 @section('extraJS')
-    
+    <script>
+        $(document).ready(function() {
+            $('.btn-eliminar').on('click', function() {
+                var id = $(this).data('id');
+                var token = "{{ csrf_token() }}";
+
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡No podrás revertir esto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminarlo!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: '{{ route('capacitacion.capacitacion.destroy', ":capacitacion") }}'.replace(':capacitacion', id),
+                            type: 'DELETE',
+                            data: {
+                                _token: $('meta[name="csrf-token"]').attr('content')
+                            },
+                            success: function(response) {
+                                if (response.success) {
+                                    Swal.fire(
+                                        'Eliminado!',
+                                        'La capacitación ha sido eliminada.',
+                                        'success'
+                                    );
+                                    location.reload();
+                                } else {
+                                    toastr.error(response.message);
+                                }
+                            },
+                            error: function(response) {
+                                toastr.error('Ocurrió un error, inténtalo de nuevo.');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
 
