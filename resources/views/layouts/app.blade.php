@@ -55,7 +55,7 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 100px;
-            border: 10px solid rgba(0, 255, 255, 0.25);
+            border: 10px solid #0287DA;
             border-radius: 15px;
             z-index: 10000;
         }
@@ -128,6 +128,27 @@
         window.scrollTo(0, 0);
     });
     </script>
+    
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>    
 
     @yield('scripts')
 </body>

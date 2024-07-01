@@ -558,7 +558,7 @@
                                                         PONTE EN CONTACTO
                                                     </div>
                                                 </div>
-                                                <form action="{{ route('formularioContact') }}" method="POST" class="row form-group" id="fomulario-home_grande">
+                                                <form action="{{ route('formularioContact') }}" method="POST" class="row form-group needs-validation" id="fomulario-home_grande" novalidate>
                                                     @csrf
                                                     <input type="hidden" name="tipoForm" value="home">
                                                     <div class="col-lg-6 col-12">
@@ -576,7 +576,7 @@
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
-                                                            <input required type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                            <input required type="email" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
@@ -630,7 +630,7 @@
                                                 PONTE EN CONTACTO
                                             </div>
                                         </div>
-                                        <form action="{{ route('formularioContact') }}" method="POST" class="row form-group" id="fomulario-home_chico">
+                                        <form action="{{ route('formularioContact') }}" method="POST" class="row form-group needs-validation" id="fomulario-home_chico" novalidate>
                                             @csrf
                                             <div class="col-md-6 col-12">
                                                 <div class="input-group mb-3">
@@ -647,7 +647,7 @@
                                             <div class="col-md-6 col-12">
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-4 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
-                                                    <input required type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                    <input required type="email" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">

@@ -192,7 +192,7 @@
                 </div>
                 <div class="row">
                     <div class="col-10 mx-auto">
-                        <form action="{{ route('formularioContact') }}" method="POST" class="row form-group" id="formulario-home_grande">
+                        <form action="{{ route('formularioContact') }}" method="POST" class="row form-group needs-validation" id="formulario-home_grande" novalidate>
                             @csrf
                             <div class="col-lg-6 col-12">
                                 <div class="input-group mb-3">
