@@ -388,7 +388,7 @@
         </div>
     </div>
 
-    <div class="container-fluid container-servicios mb-5">
+    <div class="container-fluid container-servicios mb-5" data-aos="zoom-in">
         <div class="row mb-5">
             <div class="col">
                 <div class="row">
@@ -548,7 +548,7 @@
                     ">
                         <div class="row mt-5">
                             <div class="col-lg-3 col-md-12 col-12 py-5"></div>
-                            <div class="col-lg-9 col-md-9 col-11 mx-auto">
+                            <div class="col-lg-9 col-md-9 col-11 mx-auto" >
                                 <div class="row">
                                     <div class="col-lg-8 col-md-12 col-11 cont-formulario py-3 mx-auto">
                                         <div class="row">

@@ -247,7 +247,7 @@
             <div class="col-11 mx-auto mt-5 mb-5">
                 <div class="row">
                     @foreach ($galerias as $g)
-                        <div class="col-lg-4 col-6 px-1 py-1">
+                        <div class="col-lg-4 col-6 px-1 py-1" data-aos="zoom-out-up">
                             <div class="card rounded-0">
                                 <img src="{{ asset('img/photos/galerias/'.$g->imagen) }}" alt="imagen-galeria" class="img-fluid">
                             </div>

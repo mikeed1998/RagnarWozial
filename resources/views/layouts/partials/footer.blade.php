@@ -11,6 +11,7 @@
 
     .link-footer {
         color: #FFFFFF;
+        text-decoration: none;
     }
 
     .link-footer:hover {
@@ -53,16 +54,16 @@
                                     <div class="col-2 border-2 border-bottom border-primary"></div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-3" style="font-size: 0.8rem;">Tel. {{ $config->whatsapp }}</div>
-                            <div class="col-12" style="font-size: 0.8rem;">Email: {{ $config->destinatario }}</div>
-                            <div class="col-12" style="font-size: 0.8rem;">
-                                <a href="http://wa.me/{{ $config->whatsapp }}">
+                            <div class="col-12 mt-3" style="font-size: 0.8rem; text-decoration: none;">Tel. {{ $config->whatsapp }}</div>
+                            <div class="col-12" style="font-size: 0.8rem; text-decoration: none;">Email: {{ $config->destinatario }}</div>
+                            <div class="col-12" style="font-size: 0.8rem; text-decoration: none;">
+                                <a href="http://wa.me/{{ $config->whatsapp }}" class="text-decoration-none">
                                     <i class="bi bi-whatsapp fs-4 px-1 icono-footer"></i>
                                 </a>
-                                <a href="{{ $config->facebook }}">
+                                <a href="{{ $config->facebook }}" class="text-decoration-none">
                                     <i class="bi bi-facebook fs-4 px-1 icono-footer"></i>
                                 </a>
-                                <a href="{{ $config->instagram }}">
+                                <a href="{{ $config->instagram }}" class="text-decoration-none">
                                     <i class="bi bi-instagram fs-4 px-1 icono-footer"></i>
                                 </a>
                             </div>
