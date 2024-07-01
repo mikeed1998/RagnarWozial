@@ -6,7 +6,9 @@
 
     .link-sider-admin:hover {
         text-decoration: underline;
-        color: #FFFFFF;
+        color: #FAC706;
+        font-weight: 800;
+        font-size: 1rem;
     }
 
 </style>

@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #e5e8eb  !important;
+            background-color: #20395F  !important;
         }
 
         .card-header { background-color: #b0c1d1  !important; }

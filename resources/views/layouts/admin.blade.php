@@ -46,11 +46,60 @@
         }
     </style>
 
+<style>
+    .contenedor-pagina {
+       visibility: visible;
+   }
+
+   .battery {
+       position: absolute;
+       top: 5%;
+       left: 15%;
+       transform: translate(-50%, -50%);
+       width: 400px;
+       height: 50px;
+       border: 10px solid #151e2c;
+       border-radius: 15px;
+       z-index: 10000;
+   }
+
+   .battery:before {
+       content: "";
+       position: absolute;
+       top: 6px;
+       left: 6px;
+       height: 20px;
+       width: 0%;
+       background-color: #FAC706;
+       border-radius: 5px;
+       animation: full 1s linear infinite;
+   }
+
+   @keyframes full {
+       0% {
+           width: 0%;
+       }
+       25% {
+           width: 24%;
+       }
+       50% {
+           width: 48%;
+       }
+       75% {
+           width: 72%;
+       }
+       100% {
+           width: 96%;
+       }
+   }
+</style>
+
     <script src="{{ asset('js/ajax.js') }}"></script>
 
     @yield('extraCSS')
 </head>
-<body style=" background-image: url({{ asset('img/design/Bambinos/fondoadmin.png') }});
+<body style=" 
+            /* background-image: url({{ asset('img/photos/backgrounds/bg-13.jpg') }}); */
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: center center;
@@ -58,6 +107,7 @@
             width: 100%;">
 
     <div class="container-fluid">
+        <div class="battery bg-dark"></div>
         <div class="row">
             <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12 mx-auto px-1">
                 @include('layouts.partials_admin.header')
@@ -73,6 +123,20 @@
     </div>
 
     {!! Toastr::message() !!}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.querySelector('.battery').style.display = 'none';
+                document.getElementById('boton-negro').style.display = 'none';
+            }, 1000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Colocar al principio de la página automáticamente
+        window.scrollTo(0, 0);
+    });
+    </script>
 
     @yield('extraJS')
 
