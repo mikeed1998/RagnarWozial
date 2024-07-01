@@ -150,7 +150,7 @@
         }
 
         .tarjeta-nosotros {
-            z-index: 9999; 
+            z-index: 9998; 
             height: 24rem; 
             margin-top: 3rem;
         }
@@ -201,7 +201,7 @@
         }
 
         .tarjeta-nosotros {
-            z-index: 9999; 
+            z-index: 9998; 
             height: 18rem; 
             margin-top: 2rem;
         }
@@ -253,7 +253,7 @@
         }
 
         .tarjeta-nosotros {
-            z-index: 9999; 
+            z-index: 9998; 
             height: auto; 
             margin-top: 13rem;
         }

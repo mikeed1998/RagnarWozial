@@ -43,16 +43,64 @@
         }
     </style>
 
+    <style>
+         .contenedor-pagina {
+            visibility: visible;
+        }
+
+        .battery {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 100px;
+            border: 10px solid rgba(0, 255, 255, 0.25);
+            border-radius: 15px;
+            z-index: 10000;
+        }
+
+        .battery:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            height: 70px;
+            width: 0%;
+            background-color: #0287DA;
+            border-radius: 5px;
+            animation: full 1s linear infinite;
+        }
+
+        @keyframes full {
+            0% {
+                width: 0%;
+            }
+            25% {
+                width: 24%;
+            }
+            50% {
+                width: 48%;
+            }
+            75% {
+                width: 72%;
+            }
+            100% {
+                width: 96%;
+            }
+        }
+    </style>
+
     @yield('extracss')
 </head>
 <body>
     <div id="app">
         @include('layouts.partials.header')
-
-        <main class="">
-            @yield('content')
-        </main>
-
+            <div class="battery bg-dark"></div>
+            <main class="contenedor-pagina position-relative">
+                <div class="position-absolute w-100 top-0 bottom-0 start-0 bg-black text-center" style="z-index: 9999;" id="boton-negro"></div>
+                @yield('content')
+            </main>
         @include('layouts.partials.footer')
     </div>
     
@@ -65,6 +113,20 @@
     
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.querySelector('.battery').style.display = 'none';
+                document.getElementById('boton-negro').style.display = 'none';
+            }, 1000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Colocar al principio de la página automáticamente
+        window.scrollTo(0, 0);
+    });
     </script>
 
     @yield('scripts')
