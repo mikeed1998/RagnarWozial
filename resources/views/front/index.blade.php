@@ -565,30 +565,45 @@
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
                                                             <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                                            <div class="invalid-feedback">
+                                                                No valido o vacio
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
                                                             <input required type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                                            <div class="invalid-feedback">
+                                                                No valido o vacio
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
                                                             <input required type="email" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                            <div class="invalid-feedback">
+                                                                ejemplo@dominio.com
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
                                                             <input required type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                            <div class="invalid-feedback">
+                                                                Formato no válido
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-2 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
                                                             <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                            <div class="invalid-feedback">
+                                                                No valido o vacio
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -636,30 +651,45 @@
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-4 col-4 py-3 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
                                                     <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                                    <div class="invalid-feedback">
+                                                        Formato no válido
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-4 col-4 py-3 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
                                                     <input required type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                                    <div class="invalid-feedback">
+                                                        Formato no válido
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-4 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
                                                     <input required type="email" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                    <div class="invalid-feedback">
+                                                        ejemplo@dominio.com
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-4 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
                                                     <input required type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                    <div class="invalid-feedback">
+                                                        Formato no válido
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text col-md-2 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
                                                     <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                    <div class="invalid-feedback">
+                                                        Formato no válido
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
