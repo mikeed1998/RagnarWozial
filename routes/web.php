@@ -49,7 +49,7 @@
             Route::put('/update/{id}','PoliticasController@update')->name('update');
         });
 
-        Route::prefix('faqs')->name('faqs.')->group(function(){
+        Route::prefix('faqsA')->name('faqsA.')->group(function(){
             Route::get('/','FAQController@index')->name('index');
             Route::get('/create','FAQController@create')->name('create');
             Route::post('/store','FAQController@store')->name('store');

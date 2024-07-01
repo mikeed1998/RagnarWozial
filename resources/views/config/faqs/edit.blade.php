@@ -20,13 +20,13 @@
 @section('content')
 
     <div class="row mt-5 mb-4 px-2">
-        <a href="{{ route('faqs.index') }}" class="mt-5 col col-md-2 btn btn-sm btn-dark mr-auto"><i class="fa fa-reply"></i> Regresar</a>
+        <a href="{{ route('faqsA.index') }}" class="mt-5 col col-md-2 btn btn-sm btn-dark mr-auto"><i class="fa fa-reply"></i> Regresar</a>
     </div>
 
     <div class="col-12 col-md-8 mx-auto">
 		<div class="card">
 			<div class="card-body">
-				<form action="{{ route('faqs.update', ['id' => $faq->id]) }}" method="post">
+				<form action="{{ route('faqsA.update', ['id' => $faq->id]) }}" method="post">
 					@csrf
 					@method('put')
 					<div class="form-group">

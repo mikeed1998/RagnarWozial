@@ -26,7 +26,7 @@ class FAQController extends Controller
         $faq->save();
     
         \Toastr::success('Pregunta creada');
-        return redirect()->route('faqs.index');
+        return redirect()->route('faqsA.index');
     }
 
     public function show($id) {
@@ -47,7 +47,7 @@ class FAQController extends Controller
         $faq->update();
 
         \Toastr::success('Pregunta actualizada');
-        return redirect()->route('faqs.index');
+        return redirect()->route('faqsA.index');
     }
 
     public function destroy($id) {

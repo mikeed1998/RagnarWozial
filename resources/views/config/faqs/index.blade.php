@@ -24,7 +24,7 @@
             <a href="{{ route('front.admin') }}" class="mt-5 w-50 col col-md-2 btn btn-sm btn-dark mr-auto"><i class="fa fa-reply"></i> Regresar</a>
         </div>
         <div class="col-6 text-end">
-            <a href="{{ route('faqs.create') }}" class="mt-5 w-50 col col-md-2 btn btn-sm btn-success text-white"><i class="fa fa-plus"></i> Agregar</a>
+            <a href="{{ route('faqsA.create') }}" class="mt-5 w-50 col col-md-2 btn btn-sm btn-success text-white"><i class="fa fa-plus"></i> Agregar</a>
         </div>
     </div>
 
@@ -32,14 +32,14 @@
         <div class="card" data-card="{{ $f->id }}">
             <div class="row">
                 <div class="col-9">
-                    <a href="{{ route('faqs.show', ['id' => $f->id]) }}" class="btn btn-link btn-block py-0 text-left fs-5">
+                    <a href="{{ route('faqsA.show', ['id' => $f->id]) }}" class="btn btn-link btn-block py-0 text-left fs-5">
                         {{ $f->pregunta }}
                     </a>
                 </div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col-6">
-                            <a href="{{ route('faqs.edit', ['id' => $f->id]) }}" class="btn btn-sm btn-info text-right w-100 rounded-0">
+                            <a href="{{ route('faqsA.edit', ['id' => $f->id]) }}" class="btn btn-sm btn-info text-right w-100 rounded-0">
                                 <i class="bi bi-pencil-square fs-5"></i>
                             </a>
                         </div>
@@ -71,7 +71,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '{{ route("faqs.destroy", ":id") }}'.replace(':id', id),
+                        url: '{{ route("faqsA.destroy", ":id") }}'.replace(':id', id),
                         type: 'DELETE',
                         data: {
                             _token: $('meta[name="csrf-token"]').attr('content')

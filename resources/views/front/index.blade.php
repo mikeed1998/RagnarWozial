@@ -296,6 +296,7 @@
     .dot-btn {
         width: 16px; /* Ajusta el tamaño según sea necesario */
         height: 16px;
+        cursor: pointer;
     }
 
     .dot-btn.active {

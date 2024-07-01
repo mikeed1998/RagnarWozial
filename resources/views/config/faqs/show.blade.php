@@ -30,12 +30,12 @@
 			<div class="card-body">
 				<div class="card">
                     <div class="card-body">
-                        {{$faq->pregunta}}
+                        {{ $faq->pregunta }}
                     </div>
                 </div>
                 <div class="card py-5">
                     <div class="card-body">
-                        {{$faq->respuesta}}
+                        {!! $faq->respuesta !!}
                     </div>
                 </div>
 			</div>

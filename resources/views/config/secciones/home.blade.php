@@ -375,6 +375,28 @@
     }
 </style>
 
+<style>
+    .contacto_d {
+        position: relative;
+    }
+
+    .oculto_d {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo según necesites */
+        z-index: 3; /* Ajusta el z-index según sea necesario para que esté sobre el contenido */
+        filter: 100%;
+    }
+
+    .contacto_d:hover .oculto_d {
+        display: block; /* Muestra el elemento oculto al hacer hover sobre .slider_c */
+    }
+</style>
+
 
 @endsection
 
@@ -617,82 +639,38 @@
         </div>
     </div>
 
-    <div class="container-fluid py-5" style="background-color: #028AE8;">
-        <div class="row">
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_01.png') }}" alt="">
+    <div class="container-fluid contacto_d px-0 py-5" style="background-color: #028AE8;">
+        <div class="row  px-0">
+            <div class="col position-relative">
+                <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_d z-3">
+                    <div class="row h-100">
+                        <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
+                            <a href="{{ route('seccion.show', ['slug' => 'capacitacion']) }}" class="btn btn-light fs-1 p-2 w-100">Editar en capacitación</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
+                    @foreach ($capacitaciones as $cap)
+                        <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
+                            <div class="row">
+                                <div class="col position-relative text-center">
+                                    <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
+                                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                        <img src="{{ asset('img/photos/capacitaciones/'.$cap->icono) }}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col py-2 text-center">
+                                    <div class="row">
+                                        <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
+                                            {{ $cap->texto }}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_02.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_03.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-6 py-lg-0 py-md-3 py-3">
-                <div class="row">
-                    <div class="col position-relative text-center">
-                        <img src="{{ asset('img/photos/home/Marco.png') }}" alt="" class="img-fluid">
-                        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-                            <img src="{{ asset('img/photos/home/Icono_04.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-2 text-center">
-                        <div class="row">
-                            <div class="col-7 mx-auto" style="color:#0F0743; font-weight:700;">
-                                Capacitados para la seguridad privada
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

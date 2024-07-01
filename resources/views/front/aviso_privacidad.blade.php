@@ -11,7 +11,7 @@
     <section>
         <div class="bg-global">
             <div class="col-12 p-4" style="background-color: black; color: white;">
-                <div class="text-center text-white fs-1" style="font-size:24px;color: white; font-family: 'Sansation Bold';"> {{ $aviso_privacidad->titulo }} </div>
+                <div class="text-center text-white fs-1" style="font-size:24px;color: white;"> {{ $aviso_privacidad->titulo }} </div>
             </div>
         </div>
     </section>

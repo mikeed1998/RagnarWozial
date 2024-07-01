@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Configuracion;
 use Illuminate\Support\ServiceProvider;
 use App\Servicio;
 
@@ -24,9 +25,13 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layouts.partials.header', function ($view) {
-            $servicios = Servicio::all(); // Ejemplo de cómo obtener servicios de TuModelo
-            $view->with('servicios', $servicios);
+        $views = ['layouts.partials.header', 'layouts.partials.footer'];
+
+        view()->composer($views, function ($view) {
+            $servicios = Servicio::all();
+            $config = Configuracion::first();
+            
+            $view->with('servicios', $servicios)->with('config', $config);
         });
     }
 }

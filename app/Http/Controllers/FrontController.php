@@ -105,8 +105,8 @@ class FrontController extends Controller
     }
 
     public function faqs() {
-        $faqs = Faq::all();
-        return view('font.faqs', compact('faqs'));
+        $preguntas = Faq::all();
+        return view('front.faqs', compact('preguntas'));
     }
 
     public function formularioContact(Request $request) {

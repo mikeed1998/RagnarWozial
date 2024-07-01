@@ -37,19 +37,19 @@
                 <a href="{{ route('seccion.show', ['slug' => 'nosotros'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-postcard-fill"></i> Nosotros</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'servicios'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-window"></i> Servicios</a>
+                <a href="{{ route('seccion.show', ['slug' => 'servicios'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-stack"></i> Servicios</a>
             </div>
             <div class="col-9 py-2 mx-auto">
                 <a href="{{ route('seccion.show', ['slug' => 'sliders'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-card-image"></i> Sliders</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'galeria'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Galeria</a>
+                <a href="{{ route('seccion.show', ['slug' => 'galeria'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-camera-fill"></i> Galeria</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'capacitacion'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Capacitación</a>
+                <a href="{{ route('seccion.show', ['slug' => 'capacitacion'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-clipboard-check-fill"></i> Capacitación</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'contacto'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-building-fill"></i> Contacto</a>
+                <a href="{{ route('seccion.show', ['slug' => 'contacto'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Contacto</a>
             </div>
         </div>
     </div>
