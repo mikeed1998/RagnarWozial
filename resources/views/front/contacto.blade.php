@@ -5,7 +5,6 @@
 @section('extracss')
 
     <style>
-
         .portada-contacto {
             background-position: center center;
             background-repeat: no-repeat;
@@ -15,7 +14,7 @@
         .cont-formulario {
             background-color: #FFFFFF;
             border-radius: 1rem;
-            box-shadow: 0 0 3re m rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
         }
 
         .input-group-text {
@@ -63,6 +62,7 @@
             background-color: #0287DA;
             padding: 2.5rem 0;
         }
+        
         .col-right {
             transform: skewX(-30deg); /* Ajusta el ángulo de inclinación */
             border-left: 5px solid #0F0743;
@@ -161,13 +161,27 @@
             }
         }
 
+        /* Ocultar el body inicialmente */
+        body {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Clase para mostrar el body */
+        .body-visible {
+            display: block;
+            opacity: 1;
+        }
     </style>
 
 @endsection
 
 @section('content')
+
     
-    <div class="conatiner-fluid">
+    
+    <div class="container-fluid">
         <div class="row">
             <div class="col portada-contacto" style="
                 background-image: url('{{ asset('img/photos/contacto/Banner.png') }}');
@@ -315,7 +329,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col px-0">
                 {!! $config->mapa !!}
             </div>
         </div>
@@ -324,9 +338,11 @@
 @endsection
 
 @section('scripts')
-    
     <script>
-
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.body.classList.add('body-visible');
+            }, 2000); // 3000 ms = 3 segundos
+        });
     </script>
-
 @endsection
