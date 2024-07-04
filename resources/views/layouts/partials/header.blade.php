@@ -66,7 +66,7 @@
     }
 
     .texto-menu {
-        font-size: 1.25rem;
+        font-size: 1.20rem;
         font-weight: 500;
         position: absolute;
         top: 50%;

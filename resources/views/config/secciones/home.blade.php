@@ -586,7 +586,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col text-end text-white py-3" style="line-height: 1;">
-                                                        {!! $serv->descripcion !!}
+                                                        {{-- {!! $serv->descripcion !!} --}}
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -702,13 +702,13 @@
                             <div class="col-lg-9 col-md-9 col-11 mx-auto">
                                 <div class="row contacto_c">
                                     <div class="col-lg-8 col-md-12 col-11 cont-formulario py-3 mx-auto position-relative">
-                                        <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_c z-3">
+                                        {{-- <div class="col-12 position-absolute top-0 bottom-0 start-0 oculto_c z-3">
                                             <div class="row h-100">
                                                 <div class="col-8 mx-auto d-flex align-items-center justify-content-center">
                                                     <a href="#/" class="btn btn-danger fs-1 p-2 w-100">No es editable</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="row">
                                             <div class="col-10 px-0 py-3 mx-auto">
                                                 <div class="row">
@@ -722,37 +722,37 @@
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-nombre">NOMBRE</span>
-                                                            <input required type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
+                                                            <input disabled type="text" name="nombre" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-nombre">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-empresa">EMPRESA</span>
-                                                            <input required type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
+                                                            <input disabled type="text" name="empresa" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-empresa">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-email">EMAIL</span>
-                                                            <input required type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
+                                                            <input disabled type="text" name="email" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-4 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">WHATSAPP</span>
-                                                            <input required type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                            <input disabled type="number" name="whatsapp" class="form-control input-form col-8 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text col-lg-2 col-md-3 col-4 py-3 d-flex align-items-center justify-content-center" id="group-whatsapp">MENSAJE</span>
-                                                            <input required type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
+                                                            <input disabled type="text" name="mensaje" class="form-control input-form col-10 shadow-none" aria-label="Sizing example input" aria-describedby="group-whatsapp">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="row">
                                                             <div class="col-lg-3 col-12 text-center mx-auto">
-                                                                <input type="submit" class="btn btn-outline w-100 boton-form py-3" value="ENVIAR">
+                                                                <input disabled type="submit" class="btn btn-outline w-100 boton-form py-3" value="ENVIAR">
                                                             </div>
                                                         </div>
                                                     </div>
